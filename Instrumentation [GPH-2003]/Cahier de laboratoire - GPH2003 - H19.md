@@ -113,7 +113,7 @@ Colonne 5 = Fourier
 #### Types de capteurs de courant
 
 - Shunt: Résistance connue parcourue par un courant et mesure à ses bornes. Résistance faible pour ne pas influencer la mesure, $\Delta V$ détectable, tolérance élevée.
-- Hall: Le champ magnétique produit par le passage du courant dans un fil fait dévier la trajectoire d'électrons et créé une différence de potentiel aux bornes du capteur à cause de cette variation de densité électronique de par et d'autre du capteur. Une gaine coaxiale ne permet pas une mesure par effet hall (faraday effect)
+- Hall: Le champ magnétique produit par le passage du courant dans un fil fait dévier la trajectoire d'électrons et créé une différence de potentiel aux bornes du capteur à cause de cette variation de densité électronique de par et d'autre du capteur. Une gaine coaxiale ne permet pas une mesure par effet hall (faraday effet)
 
 #### Manipulations
 
@@ -130,18 +130,73 @@ Colonne 5 = Fourier
 
 #### Shunt
 
-$R_{shunt}=$, $P_{max}=$
-$R_{circuit}=​$
+$R_{shunt}=(\pm)\Omega​$, $P_{max}=(\pm )W​$
+$R_{circuit}=(\pm)\Omega​$
 
-| Tension source [V$\pm$] | Tension $R_{shunt}$ [V$\pm$] | Courant calculé (1) | Courant calculé(2) |
-| ----------------------- | ---------------------------- | ------------------- | ------------------ |
-| 0                       | 0                            | 0                   | 0                  |
-| 0                       | 0                            | 0                   | 0                  |
-|                         | 0                            | 0                   | 0                  |
+| Tension source [V$\pm$0.05] | Tension $R_{shunt}$ [V$\pm$0] | Courant dans $R_{shunt}$ [mA$\pm​$0] | Courant total [mA$\pm$0] |
+| --------------------------- | ----------------------------- | ----------------------------------- | ------------------------ |
+| 0                           | 0                             | 0                                   | 0                        |
+| 0                           | 0                             | 0                                   | 0                        |
+| 0                           | 0                             | 0                                   | 0                        |
+
+Graphique du calcul des courants selon la tension de la source.
+
+
+
+Comparaison du courant calculé à partir de Rtotal et Rshunt:
+
+> 
 
 
 
 #### Hall
+
+Construire circuit d'alimentation pour alimenter capteur Hall.
+
+1. Monter le circuit à 4.3
+2. Choisir un résistance R (R=)
+3. Garder les mêmes résistances sur le circuit de shunt et mettre de la sur le capteur à effet hall. Prendre les mesures en incrémentant la tension de la même manière qu'avec le shunt afin de tracer la courbe d'étalonnage.
+
+| Tension Source [V$\pm$0.05] | Tension de Hall [mV$\pm$0] |
+| --------------------------- | -------------------------- |
+|                             |                            |
+|                             |                            |
+|                             |                            |
+
+##### Graphique de la courbe d'étalonnage 
+
+
+
+
+
+##### L'angle influence-t-il la mesure?
+
+De combien approximativement?
+Angle vs Tension
+
+
+
+##### Le courant d'alimentation du capteur influence-t-il les mesure?
+
+Oui, le courant étant augmenté, le champ magnétique est plus intense. Un champ magnétique plus grand traversant un courant similaire engendrera un un déplacement des électrons plus grand à cause de la force de Lorentz plus élevée et donc une tension plus grande.
+
+
+
+#### Comparaison des caractéristiques des capteurs
+
+| Caractéristique | Capteur Shunt | Capteur Hall |
+| --------------- | ------------- | ------------ |
+| Plage           |               |              |
+| Sensibilité     |               |              |
+| Linéarité       |               |              |
+| Résolution      |               |              |
+| Comsommation    |               |              |
+| Bande passante  |               |              |
+| Synthèse        |               |              |
+
+Quel capteur est meilleur? Dans quelles situations l'un est-il plus avantageux que l'autre?
+
+
 
 
 
