@@ -130,14 +130,16 @@ Colonne 5 = Fourier
 
 #### Shunt
 
-$R_{shunt}=(\pm)\Omega​$, $P_{max}=(\pm )W​$
-$R_{circuit}=(\pm)\Omega​$
+0.05V = 0.14A
 
-| Tension source [V$\pm$0.05] | Tension $R_{shunt}$ [V$\pm$0] | Courant dans $R_{shunt}$ [mA$\pm​$0] | Courant total [mA$\pm$0] |
-| --------------------------- | ----------------------------- | ----------------------------------- | ------------------------ |
-| 0                           | 0                             | 0                                   | 0                        |
-| 0                           | 0                             | 0                                   | 0                        |
-| 0                           | 0                             | 0                                   | 0                        |
+$R_{shunt}=(1.5\pm0.2)\Omega$ résistance réelle , $P_{max}=(\pm )W$
+$R_{circuit}=(\pm)\Omega$
+
+| Tension source [V$\pm$0.0] | Tension $R_{shunt}$ [V$\pm$0] | Courant dans $R_{shunt}$ [mA$\pm​$0] | Courant total [mA$\pm$0] |
+| -------------------------- | ----------------------------- | ----------------------------------- | ------------------------ |
+| 0.05                       | 0                             | 0                                   | 0                        |
+| 0                          | 0                             | 0                                   | 0                        |
+| 0                          | 0                             | 0                                   | 0                        |
 
 Graphique du calcul des courants selon la tension de la source.
 
