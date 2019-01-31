@@ -102,7 +102,46 @@ Colonne 5 = Fourier
 
 ### Préparation
 
+#### Les caractéristiques majeures d'un capteur sont souvent
+
+- Étendue (plage) sur laquelle la mesure est valable
+- Linéarité du capteur. Est-ce que la réponse du capteur est directement proportionnelle au signal physique mesuré?
+- Réponse fréquentielle (rapidité de la réactivité du capteur)
+- Résolution (plus petite variation mesurable)
+- Sensibilité (gain du capteur, petite variation physique=grande variation signal)
+
+#### Types de capteurs de courant
+
+- Shunt: Résistance connue parcourue par un courant et mesure à ses bornes. Résistance faible pour ne pas influencer la mesure, $\Delta V$ détectable, tolérance élevée.
+- Hall: Le champ magnétique produit par le passage du courant dans un fil fait dévier la trajectoire d'électrons et créé une différence de potentiel aux bornes du capteur à cause de cette variation de densité électronique de par et d'autre du capteur. Une gaine coaxiale ne permet pas une mesure par effet hall (faraday effect)
+
+#### Manipulations
+
+##### Shunt
+
+1. Faire le circuit du protocole. Calculer la valeur nécessaire de la résistance ainsi que sa tolérance en puissance
+2. Faire varier la tension source jusqu'aux limites de la source/tolérance avec des incréments faibles afin d'avoir une bonne résolution.
+3. Mesurer la résistance totale du circuit avec précision et trouvez le courant en fonction de la tension.
+4. Comparer la méthode au point 2 et 4
+
+
+
 ### Séance
+
+#### Shunt
+
+$R_{shunt}=$, $P_{max}=$
+$R_{circuit}=​$
+
+| Tension source [V$\pm$] | Tension $R_{shunt}$ [V$\pm$] | Courant calculé (1) | Courant calculé(2) |
+| ----------------------- | ---------------------------- | ------------------- | ------------------ |
+| 0                       | 0                            | 0                   | 0                  |
+| 0                       | 0                            | 0                   | 0                  |
+|                         | 0                            | 0                   | 0                  |
+
+
+
+#### Hall
 
 
 
