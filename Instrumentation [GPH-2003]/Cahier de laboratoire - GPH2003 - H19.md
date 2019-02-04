@@ -132,14 +132,43 @@ Colonne 5 = Fourier
 
 0.05V = 0.14A
 
-$R_{shunt}=(1.5\pm0.2)\Omega$ résistance réelle , $P_{max}=(\pm )W$
-$R_{circuit}=(\pm)\Omega$
+$R_{shunt}=(0.01\pm0.25\%)\Omega$ résistance réelle , $P_{max}=(5\pm )W$
+$R_{circuit}=(2.3\pm0.5)\Omega$
 
-| Tension source [V$\pm$0.0] | Tension $R_{shunt}$ [V$\pm$0] | Courant dans $R_{shunt}$ [mA$\pm​$0] | Courant total [mA$\pm$0] |
-| -------------------------- | ----------------------------- | ----------------------------------- | ------------------------ |
-| 0.05                       | 0                             | 0                                   | 0                        |
-| 0                          | 0                             | 0                                   | 0                        |
-| 0                          | 0                             | 0                                   | 0                        |
+MAX amperage circuit = 1.4A, donc on se limite à 1A
+
+
+
+| Tension source [V$\pm$0.0] | Tension $R_{shunt}$ [mV$\pm$0.002] | Courant dans $R_{shunt}$ [mA$\pm$0] | Courant total [mA$\pm$0] | COurant sur la source [A] |
+| -------------------------- | ---------------------------------- | ----------------------------------- | ------------------------ | ------------------------- |
+| 0.05                       | 0.194                              | 0                                   | 0                        | 0.02                      |
+| 0.1                        | 0.415                              | 0                                   | 0                        | 0.04                      |
+| 0.15                       | 0.633                              | 0                                   | 0                        | 0.06                      |
+| .20                        | 0.854                              |                                     |                          | 0.09                      |
+| .25                        | 1.074                              |                                     |                          | 0.11                      |
+| .3                         | 1.298                              |                                     |                          | 0.13                      |
+| .35                        | 1.519                              |                                     |                          | 0.15                      |
+| .4                         | 1.738                              |                                     |                          | 0.17                      |
+| .45                        | 1.958                              |                                     |                          | 0.2                       |
+| .50                        | 2.172                              |                                     |                          | .22                       |
+| .60                        | 2.614                              |                                     |                          | 0.26                      |
+| .70                        | 3.053                              |                                     |                          | 0.31                      |
+| .80                        | 3.488                              |                                     |                          | 0.35                      |
+| .90                        | 3.924                              |                                     |                          | 0.39                      |
+| 1.00                       | 4.357                              |                                     |                          | 0.44                      |
+| 1.1                        | 4.794                              |                                     |                          | 0.48                      |
+| 1.2                        | 5.225                              |                                     |                          | 0.52                      |
+| 1.3                        | 5.699                              |                                     |                          | 0.57                      |
+| 1.4                        | 6.128                              |                                     |                          | 0.61                      |
+| 1.5                        | 6.508                              |                                     |                          | 0.65                      |
+| 1.6                        | 6.992                              |                                     |                          | 0.7                       |
+| 1.7                        | 7.409                              |                                     |                          | 0.74                      |
+| 1.8                        | 7.830                              |                                     |                          | 0.78                      |
+| 1.9                        | 8.246                              |                                     |                          | 0.83                      |
+| 2.0                        | 8.660                              |                                     |                          | 0.87                      |
+| 2.2                        | 9.400 $\pm0.05$                    |                                     |                          | 0.94                      |
+| 2.4                        | 10.190 $\pm 0.1$                   |                                     |                          | 1.02                      |
+| 2.6                        | 10.985$\pm 0.1$                    |                                     |                          | 1.10                      |
 
 Graphique du calcul des courants selon la tension de la source.
 
@@ -156,14 +185,48 @@ Comparaison du courant calculé à partir de Rtotal et Rshunt:
 Construire circuit d'alimentation pour alimenter capteur Hall.
 
 1. Monter le circuit à 4.3
-2. Choisir un résistance R (R=)
-3. Garder les mêmes résistances sur le circuit de shunt et mettre de la sur le capteur à effet hall. Prendre les mesures en incrémentant la tension de la même manière qu'avec le shunt afin de tracer la courbe d'étalonnage.
+2. Choisir un résistance R (Rtotal remesuré avec les connections =2.87+-0.05 )
+3. Garder les mêmes résistances sur le circuit de shunt et mettre de la sur le capteur à effet hall. Prendre les mesures en incrémentant la tension de la même manière qu'avec le shunt afin de tracer la courbe d'étalonnage. le courant passant dans le capteur est de 16.990mA +- 0.1
 
-| Tension Source [V$\pm$0.05] | Tension de Hall [mV$\pm$0] |
-| --------------------------- | -------------------------- |
-|                             |                            |
-|                             |                            |
-|                             |                            |
+OFFSET 6.4527
+
+| Tension Source [V$\pm$0.05] | Tension de Hall [V$\pm$0] | Courant source |
+| --------------------------- | ------------------------- | -------------- |
+| 0.1                         | 6.4510                    | 0.04           |
+|                             | 6.423                     | 0.07           |
+| 0.3                         | 6.4472                    |                |
+|                             |                           |                |
+| 0.5                         | 6.4436                    | 0.18           |
+|                             |                           |                |
+| 0.7                         | 6.4400                    | 0.25           |
+|                             |                           |                |
+| 0.9                         | 6.4360                    | .32            |
+|                             |                           |                |
+| 1.1                         | 6.4323                    | .4             |
+|                             |                           |                |
+| 1.3                         | 6.4288                    | .47            |
+| 1.4                         |                           |                |
+| 1.5                         | 6.4251                    | .54            |
+| 1.6                         |                           |                |
+| 1.7                         | 6.4216                    | .61            |
+| 1.8                         |                           |                |
+| 1.9                         | 6.4179                    | .68            |
+| 2.0                         | 6.4167                    | .71            |
+| 2.1                         |                           |                |
+| 2.2                         | 6.4127                    | .78            |
+| 2.3                         |                           |                |
+| 2.4                         | 6.4094                    | .84            |
+| 2.6                         | 6.4063                    | .91            |
+
+des grandes variations avaient étés observée à cause des vibrations sur la table. Celles-ci jouaient probablement sur les contacts des connections, augmentant ainsi la résistance du circuit. Cela a essayé d'être minimisé. 
+
+Puissance dissipé pour le capteur à effet hall:
+
+Alimentation de l'ampliOP 15V*0.01A + Alimentation du capteur 6.00V*0.03A
+
+=0.3 W constant sur toute la plage
+
+
 
 ##### Graphique de la courbe d'étalonnage 
 
@@ -176,25 +239,48 @@ Construire circuit d'alimentation pour alimenter capteur Hall.
 De combien approximativement?
 Angle vs Tension
 
+Le courant du circuit a été setté à 1A constant (2.86V) au borne du circuit.
 
+à 90, 6.406
+
+à 45 6.39
+
+à 60 6.29
+
+Ça diminue pcq la projection perpendiculaire est plus petite que quand il est à 90, soit totalement perpendiculaire
 
 ##### Le courant d'alimentation du capteur influence-t-il les mesure?
 
 Oui, le courant étant augmenté, le champ magnétique est plus intense. Un champ magnétique plus grand traversant un courant similaire engendrera un un déplacement des électrons plus grand à cause de la force de Lorentz plus élevée et donc une tension plus grande.
 
+Une augmentation de 0.2V génère environ la même variation de tension aux bornes du capteur.
+
+
+
+Mesure de la variation en fréquence
+Capteur HALL
+
+un générateur de fréquence a été envoyé dans le fil parcourant le capteur a effet Hall. Cette fréquence a été augmentée jusqu'à ce que le signal du capteur commence à varier étrangement.
+
+Fréquence de coupure = 12kHz
+
+Capteur SHUNT
+
+même chose fréquence de coupure =30kHz
+
 
 
 #### Comparaison des caractéristiques des capteurs
 
-| Caractéristique | Capteur Shunt | Capteur Hall |
-| --------------- | ------------- | ------------ |
-| Plage           |               |              |
-| Sensibilité     |               |              |
-| Linéarité       |               |              |
-| Résolution      |               |              |
-| Comsommation    |               |              |
-| Bande passante  |               |              |
-| Synthèse        |               |              |
+| Caractéristique   | Capteur Shunt | Capteur Hall |
+| ----------------- | ------------- | ------------ |
+| Plage             | [0-1]         | [0-1]        |
+| Sensibilité[mV/A] | -             | +            |
+| Linéarité         |               |              |
+| Résolution        |               |              |
+| Comsommation      |               | 0.3W         |
+| Bande passante    |               |              |
+| Synthèse          |               |              |
 
 Quel capteur est meilleur? Dans quelles situations l'un est-il plus avantageux que l'autre?
 
