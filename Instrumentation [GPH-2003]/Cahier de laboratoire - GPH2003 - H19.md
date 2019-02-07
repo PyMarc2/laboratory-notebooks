@@ -100,6 +100,10 @@ Colonne 5 = Fourier
 
 ## Capteur de Courant
 
+***date***: 1 février
+***coéquipiers***: Anais Parrot & Jordan Bourgault
+***but***:comparer deux types de capteurs de courant: résistifs et à effet Hall
+
 ### Préparation
 
 #### Les caractéristiques majeures d'un capteur sont souvent
@@ -120,11 +124,14 @@ Colonne 5 = Fourier
 ##### Shunt
 
 1. Faire le circuit du protocole. Calculer la valeur nécessaire de la résistance ainsi que sa tolérance en puissance
-2. Faire varier la tension source jusqu'aux limites de la source/tolérance avec des incréments faibles afin d'avoir une bonne résolution.
-3. Mesurer la résistance totale du circuit avec précision et trouvez le courant en fonction de la tension.
-4. Comparer la méthode au point 2 et 4
 
+![1549504002127](assets/1549504002127.png)
 
+1. Faire varier la tension source jusqu'aux limites de la source/tolérance avec des incréments faibles afin d'avoir une bonne résolution. Mesurer la tension aux bornes de RShunt.
+2. Mesurer la résistance totale du circuit avec précision et trouvez le courant en fonction de la tension.
+3. Comparer la méthode au point 2 et 4
+
+##### Hall ![1549504070875](assets/1549504070875.png)
 
 ### Séance
 
@@ -132,45 +139,62 @@ Colonne 5 = Fourier
 
 0.05V = 0.14A
 
-$R_{shunt}=(0.01\pm0.25\%)\Omega$ résistance réelle , $P_{max}=(5\pm )W$
-$R_{circuit}=(2.3\pm0.5)\Omega$
+La résistance $R_{shunt}​$ est beaucoup trop faible pour être mesurée, la résistance des fils est prédominante. Ainsi, on se fie à la datasheet qui dit:
 
-MAX amperage circuit = 1.4A, donc on se limite à 1A
+$R_{shunt}=(0.01000\pm0.00003)\Omega​$ 
+
+cette mesure est vérifiée grossièrement en passant un courant dans la résistance, tel qu'il y a une différence de potentiel au borne de la résistance de 10mV. Le courant traversant est alors de 0.1A, ce qui est équivalent à 0.01 Ohms. Cependant, l'incertitude sur la datasheet est plus précise que celle de l'instrumentation utilisée, elle sera donc utilisée.
+
+La résistance totale du circuit est mesurée à l'aide d'un multimètre numérique **Agilent - 34461A**
+
+$R_{circuit}=(2.3\pm0.5)\Omega​$, $P_{max}=(5\pm )W​$
+
+MAX ampérage circuit = 1.5A, donc on se limite à 1A juste par sécurité. ($P = RI^2\rightarrow \sqrt{\frac{P}{R}}=\sqrt{\frac{5}{2.3}}=1.47A​$)
+
+La limitation de la source [**Agilent - U8031A** ]:https://www.keysight.com/en/pd-2054544-pn-U8031A/triple-output-dc-power-supply-30v-6a-2x-375w?nid=-35489.995979.00&cc=CA&lc=eng
+
+est mise à 1A, alors que la tension sera variée jusqu'à l'atteinte de la limite de 1A. Les bons effectués seront de 0.05, ou de 0.1 s'il n'y a pas assez de changement.  
+
+Les branchement initiaux n'étaient pas bon, le courant était envoyé par les branchement où l'on devait prendre la tension aux bornes de RSHUNT et la tension mesurée était aux bornes des fils, donc la résistance était beaucoup trop importante, ainsi que le voltage drop. Le montage a été recommencé et la prise de donnée également.
+
+Il est possible de retrouver le courant du circuit en effectuant le calcul $\Delta V_{shunt}/R_{shunt} = I​$
+
+| Tension source [V$\pm$0.02] | Courant calculé dans $R_{shunt}$ [mA$\pm​$0.3] | Courant Calculé avec $R_{total}$[A$\pm​$0] | Courant sur la source [A$\pm$0.02] |
+| --------------------------- | --------------------------------------------- | ----------------------------------------- | ---------------------------------- |
+| 0.05                        | 19.4$ \pm 0.1$                                | 0.02$\pm$0.01                             | 0.02                               |
+| 0.1                         | 41.5$\pm0.2$                                  | 0.04$\pm$0.02                             | 0.04                               |
+| 0.15                        | 63.3$\pm0.2$                                  | 0.07$\pm$0.02                             | 0.06                               |
+| .20                         | 85.4$\pm0.3$                                  | 0.09$\pm$0.03                             | 0.09                               |
+| .25                         | 107.4$\pm 0.3$                                | 0.11$\pm$0.03                             | 0.11                               |
+| .3                          | 129.8$\pm 0.4$                                | 0.13$\pm$0.03                             | 0.13                               |
+| .35                         | 151.9$\pm 0.5$                                | 0.15$\pm$0.04                             | 0.15                               |
+| .4                          | 173.8$\pm 0.6$                                | 0.17$\pm$0.04                             | 0.17                               |
+| .45                         | 195.8$\pm 0.7$                                | 0.20$\pm$0.05                             | 0.2                                |
+| .50                         | 217.2$\pm 0.8$                                | 0.22$\pm$0.05                             | .22                                |
+| .60                         | 261.4$\pm 0.9$                                | 0.26$\pm$0.06                             | 0.26                               |
+| .70                         | 305$\pm1$                                     | 0.30$\pm$0.07                             | 0.31                               |
+| .80                         | 349$\pm 2$                                    | 0.35$\pm$0.08                             | 0.35                               |
+| .90                         | 392$\pm2$                                     | 0.39$\pm$0.09                             | 0.39                               |
+| 1.00                        | 436$\pm2$                                     | 0.4$\pm$0.1                               | 0.44                               |
+| 1.10                        | 479$\pm2$                                     | 0.5$\pm$0.1                               | 0.48                               |
+| 1.20                        | 523$\pm2$                                     | 0.5$\pm$0.2                               | 0.52                               |
+| 1.30                        | 570$\pm2$                                     | 0.6$\pm$0.2                               | 0.57                               |
+| 1.40                        | 613$\pm2$                                     | 0.6$\pm$0.2                               | 0.61                               |
+| 1.50                        | 651$\pm2$                                     | 0.6$\pm$0.2                               | 0.65                               |
+| 1.60                        | 699$\pm2$                                     | 0.7$\pm$0.2                               | 0.7                                |
+| 1.70                        | 741$\pm3$                                     | 0.7$\pm$0.2                               | 0.74                               |
+| 1.80                        | 783$\pm 3$                                    | 0.8$\pm$0.2                               | 0.78                               |
+| 1.90                        | 825 $\pm3$                                    | 0.8$\pm$0.2                               | 0.83                               |
+| 2.00                        | 866 $\pm 3$                                   | 0.9$\pm$0.2                               | 0.87                               |
+| 2.20                        | 940$\pm 6$                                    | 1.0$\pm$0.3                               | 0.94                               |
+| 2.40                        | 1020$\pm10$                                   | 1.0$\pm$0.3                               | 1.02                               |
+| 2.60                        | 1100$\pm 10$                                  | 1.1$\pm$0.3                               | 1.10                               |
+
+Graphique sommaire du calcul des courants selon la tension de RShunt.
 
 
 
-| Tension source [V$\pm$0.0] | Tension $R_{shunt}$ [mV$\pm$0.002] | Courant dans $R_{shunt}$ [mA$\pm$0] | Courant total [mA$\pm$0] | COurant sur la source [A] |
-| -------------------------- | ---------------------------------- | ----------------------------------- | ------------------------ | ------------------------- |
-| 0.05                       | 0.194                              | 0                                   | 0                        | 0.02                      |
-| 0.1                        | 0.415                              | 0                                   | 0                        | 0.04                      |
-| 0.15                       | 0.633                              | 0                                   | 0                        | 0.06                      |
-| .20                        | 0.854                              |                                     |                          | 0.09                      |
-| .25                        | 1.074                              |                                     |                          | 0.11                      |
-| .3                         | 1.298                              |                                     |                          | 0.13                      |
-| .35                        | 1.519                              |                                     |                          | 0.15                      |
-| .4                         | 1.738                              |                                     |                          | 0.17                      |
-| .45                        | 1.958                              |                                     |                          | 0.2                       |
-| .50                        | 2.172                              |                                     |                          | .22                       |
-| .60                        | 2.614                              |                                     |                          | 0.26                      |
-| .70                        | 3.053                              |                                     |                          | 0.31                      |
-| .80                        | 3.488                              |                                     |                          | 0.35                      |
-| .90                        | 3.924                              |                                     |                          | 0.39                      |
-| 1.00                       | 4.357                              |                                     |                          | 0.44                      |
-| 1.1                        | 4.794                              |                                     |                          | 0.48                      |
-| 1.2                        | 5.225                              |                                     |                          | 0.52                      |
-| 1.3                        | 5.699                              |                                     |                          | 0.57                      |
-| 1.4                        | 6.128                              |                                     |                          | 0.61                      |
-| 1.5                        | 6.508                              |                                     |                          | 0.65                      |
-| 1.6                        | 6.992                              |                                     |                          | 0.7                       |
-| 1.7                        | 7.409                              |                                     |                          | 0.74                      |
-| 1.8                        | 7.830                              |                                     |                          | 0.78                      |
-| 1.9                        | 8.246                              |                                     |                          | 0.83                      |
-| 2.0                        | 8.660                              |                                     |                          | 0.87                      |
-| 2.2                        | 9.400 $\pm0.05$                    |                                     |                          | 0.94                      |
-| 2.4                        | 10.190 $\pm 0.1$                   |                                     |                          | 1.02                      |
-| 2.6                        | 10.985$\pm 0.1$                    |                                     |                          | 1.10                      |
-
-Graphique du calcul des courants selon la tension de la source.
+Graphique sommaire du calcul des courants selon la tension de Rtotal
 
 
 
@@ -178,7 +202,7 @@ Comparaison du courant calculé à partir de Rtotal et Rshunt:
 
 > 
 
-
+ 
 
 #### Hall
 
@@ -188,37 +212,31 @@ Construire circuit d'alimentation pour alimenter capteur Hall.
 2. Choisir un résistance R (Rtotal remesuré avec les connections =2.87+-0.05 )
 3. Garder les mêmes résistances sur le circuit de shunt et mettre de la sur le capteur à effet hall. Prendre les mesures en incrémentant la tension de la même manière qu'avec le shunt afin de tracer la courbe d'étalonnage. le courant passant dans le capteur est de 16.990mA +- 0.1
 
-OFFSET 6.4527
+OFFSET 6.4527$\pm$0.008 
 
-| Tension Source [V$\pm$0.05] | Tension de Hall [V$\pm$0] | Courant source |
-| --------------------------- | ------------------------- | -------------- |
-| 0.1                         | 6.4510                    | 0.04           |
-|                             | 6.423                     | 0.07           |
-| 0.3                         | 6.4472                    |                |
-|                             |                           |                |
-| 0.5                         | 6.4436                    | 0.18           |
-|                             |                           |                |
-| 0.7                         | 6.4400                    | 0.25           |
-|                             |                           |                |
-| 0.9                         | 6.4360                    | .32            |
-|                             |                           |                |
-| 1.1                         | 6.4323                    | .4             |
-|                             |                           |                |
-| 1.3                         | 6.4288                    | .47            |
-| 1.4                         |                           |                |
-| 1.5                         | 6.4251                    | .54            |
-| 1.6                         |                           |                |
-| 1.7                         | 6.4216                    | .61            |
-| 1.8                         |                           |                |
-| 1.9                         | 6.4179                    | .68            |
-| 2.0                         | 6.4167                    | .71            |
-| 2.1                         |                           |                |
-| 2.2                         | 6.4127                    | .78            |
-| 2.3                         |                           |                |
-| 2.4                         | 6.4094                    | .84            |
-| 2.6                         | 6.4063                    | .91            |
+Incertitude l'appareil:
 
-des grandes variations avaient étés observée à cause des vibrations sur la table. Celles-ci jouaient probablement sur les contacts des connections, augmentant ainsi la résistance du circuit. Cela a essayé d'être minimisé. 
+Des bons de 0.2V ont étés fait, car les bons de 0.1 prenaient trop de temps.
+
+| Tension Source [V$\pm$0.02] | Tension de Hall [V$\pm$0.008] | Tension de Hall décalée [V$\pm$0.008] | Tension de Hall décalée avec incertitudes [V] | Courant source [mA $\pm$ 20] |
+| --------------------------- | ----------------------------- | ------------------------------------- | --------------------------------------------- | ---------------------------- |
+| 0.10                        | 6.4510                        | 0.0017                                | 0.00                                          | 40                           |
+| 0.20                        | 6.4492                        | 0.0035                                | 0.00                                          | 70                           |
+| 0.30                        | 6.4472                        | 0.0055                                | 0.00                                          | 90                           |
+| 0.50                        | 6.4436                        | 0.0091                                | 0.01                                          | 180                          |
+| 0.70                        | 6.4400                        | 0.0127                                | 0.01                                          | 250                          |
+| 0.90                        | 6.4360                        | 0.0167                                | 0.01                                          | 320                          |
+| 1.10                        | 6.4323                        | 0.0204                                |                                               | 400                          |
+| 1.30                        | 6.4288                        | 0.0239                                |                                               | 470                          |
+| 1.50                        | 6.4251                        | 0.0276                                |                                               | 540                          |
+| 1.70                        | 6.4216                        | 0.0311                                |                                               | 610                          |
+| 1.90                        | 6.4179                        | 0.0348                                |                                               | 680                          |
+| 2.00                        | 6.4167                        | 0.0360                                |                                               | 710                          |
+| 2.20                        | 6.4127                        | 0.0400                                |                                               | 780                          |
+| 2.40                        | 6.4094                        | 0.0433                                |                                               | 840                          |
+| 2.60                        | 6.4063                        | 0.0464                                |                                               | 910                          |
+
+des grandes variations avaient étés observée à cause des vibrations sur la table. Celles-ci jouaient probablement sur les contacts des connections, augmentant ainsi la résistance du circuit. Cela a essayé d'être minimisé. Les mesures ont été refaites avec une attention particulière pour les vibrations.
 
 Puissance dissipé pour le capteur à effet hall:
 
