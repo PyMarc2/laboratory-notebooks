@@ -190,19 +190,11 @@ Il est possible de retrouver le courant du circuit en effectuant le calcul $\Del
 | 2.40                        | 1020$\pm10$                                   | 1.0$\pm$0.3                               | 1.02                               |
 | 2.60                        | 1100$\pm 10$                                  | 1.1$\pm$0.3                               | 1.10                               |
 
-Graphique sommaire du calcul des courants selon la tension de RShunt.
+l'incertitude grandissante à partir de 2.2 est due aux variations qui se voyaient surement à cause du réchauffement du circuit à cause du courant qui le traversait.
 
+Graphique sommaire du calcul des courants selon la tension de RShunt. Graphique sommaire du calcul des courants selon la tension de Rtotal
 
-
-Graphique sommaire du calcul des courants selon la tension de Rtotal
-
-
-
-Comparaison du courant calculé à partir de Rtotal et Rshunt:
-
-> 
-
- 
+![capteurResistif](assets/capteurResistif.png)
 
 #### Hall
 
@@ -218,23 +210,47 @@ Incertitude l'appareil:
 
 Des bons de 0.2V ont étés fait, car les bons de 0.1 prenaient trop de temps.
 
-| Tension Source [V$\pm$0.02] | Tension de Hall [V$\pm$0.008] | Tension de Hall décalée [V$\pm$0.008] | Tension de Hall décalée avec incertitudes [V] | Courant source [mA $\pm$ 20] |
-| --------------------------- | ----------------------------- | ------------------------------------- | --------------------------------------------- | ---------------------------- |
-| 0.10                        | 6.4510                        | 0.0017                                | 0.00                                          | 40                           |
-| 0.20                        | 6.4492                        | 0.0035                                | 0.00                                          | 70                           |
-| 0.30                        | 6.4472                        | 0.0055                                | 0.00                                          | 90                           |
-| 0.50                        | 6.4436                        | 0.0091                                | 0.01                                          | 180                          |
-| 0.70                        | 6.4400                        | 0.0127                                | 0.01                                          | 250                          |
-| 0.90                        | 6.4360                        | 0.0167                                | 0.01                                          | 320                          |
-| 1.10                        | 6.4323                        | 0.0204                                |                                               | 400                          |
-| 1.30                        | 6.4288                        | 0.0239                                |                                               | 470                          |
-| 1.50                        | 6.4251                        | 0.0276                                |                                               | 540                          |
-| 1.70                        | 6.4216                        | 0.0311                                |                                               | 610                          |
-| 1.90                        | 6.4179                        | 0.0348                                |                                               | 680                          |
-| 2.00                        | 6.4167                        | 0.0360                                |                                               | 710                          |
-| 2.20                        | 6.4127                        | 0.0400                                |                                               | 780                          |
-| 2.40                        | 6.4094                        | 0.0433                                |                                               | 840                          |
-| 2.60                        | 6.4063                        | 0.0464                                |                                               | 910                          |
+| Tension Source [V$\pm$0.02] | Tension de Hall [V$\pm$0.008] | Tension de Hall décalée [V$\pm$0.008] | Courant source [mA $\pm$ 20] |
+| --------------------------- | ----------------------------- | ------------------------------------- | ---------------------------- |
+| 0.10                        | 6.4510                        | 0.0017                                | 40                           |
+| 0.20                        | 6.4492                        | 0.0035                                | 70                           |
+| 0.30                        | 6.4472                        | 0.0055                                | 90                           |
+| 0.50                        | 6.4436                        | 0.0091                                | 180                          |
+| 0.70                        | 6.4400                        | 0.0127                                | 250                          |
+| 0.90                        | 6.4360                        | 0.0167                                | 320                          |
+| 1.10                        | 6.4323                        | 0.0204                                | 400                          |
+| 1.30                        | 6.4288                        | 0.0239                                | 470                          |
+| 1.50                        | 6.4251                        | 0.0276                                | 540                          |
+| 1.70                        | 6.4216                        | 0.0311                                | 610                          |
+| 1.90                        | 6.4179                        | 0.0348                                | 680                          |
+| 2.00                        | 6.4167                        | 0.0360                                | 710                          |
+| 2.20                        | 6.4127                        | 0.0400                                | 780                          |
+| 2.40                        | 6.4094                        | 0.0433                                | 840                          |
+| 2.60                        | 6.4063                        | 0.0464                                | 910                          |
+
+Mesures pour la
+
+| Courant source [mA $\pm$ 20] | Tension de Hall décalée [mV] |
+| ---------------------------- | ---------------------------- |
+| 40                           | 1.7 $\pm$ 8                  |
+| 70                           | 3.5                          |
+| 90                           | 5.5                          |
+| 180                          | 9.1                          |
+| 250                          | 12.7                         |
+| 320                          | 16.7                         |
+| 400                          | 20.4                         |
+| 470                          | 23.9                         |
+| 540                          | 27.6                         |
+| 610                          | 31.1                         |
+| 680                          | 34.8                         |
+| 710                          | 36.0                         |
+| 780                          | 40.0                         |
+| 840                          | 43.3                         |
+| 910                          | 46.4                         |
+
+Cependant, les incertitudes sur les mesures de linéarité ne sont pas importantes. On s'intéresse seulement à la relation et non pas au offset. Si l'appareil a une incertitude absolue sur sa mesure, elle sera caractérisée sur l'offset mesuré au départ. La courbe aura donc un offset avec une incertitude de 0.008, mais la linéarité de la relation ne sera pas affectée par cette erreur, mais par l'erreur aléatoire de l'appareil qui peut être négligé, selon la fiche des spécifications du Agilent 34461A.
+
+
 
 des grandes variations avaient étés observée à cause des vibrations sur la table. Celles-ci jouaient probablement sur les contacts des connections, augmentant ainsi la résistance du circuit. Cela a essayé d'être minimisé. Les mesures ont été refaites avec une attention particulière pour les vibrations.
 
@@ -310,7 +326,88 @@ Quel capteur est meilleur? Dans quelles situations l'un est-il plus avantageux q
 
 ### Préparation
 
+Types de capteurs de position:
+
+- Potentiomètre linéaire
+- LVDT (linear variable differential transfomer)
+
+On utilise un voltmètre au lieu d'un ohmètre afin de me pas tenir compte de la résistance des fils et être plus précis
+
+#### Résistif linéaire
+
+Le déplacement sur un capteur potentiomètre a une relation linéaire entre la résistance du pot et la position du capteur. Il est donc facile de trouver un relation, puisque la variation de la tension de sortie sera directement proportionnelle à la tension entrée, selon une constante.
+
+#### LVDT
+
+On doit faire passer un courant alternatif dans la bobine afin de créer un champ magnétique variable. L'augmentation de tension dépend du couplage  du noyau ferromagnétique. La position du noyau dépend de la position du coeur ferromagnétique. On mesure la différence de tension entre la tension V2 et V3 qui présente la différence de couplage magnétique entre la bobine secondaire 1 et la bobine secondaire 2.
+
+Faible fréquence d'excitation = faible décalage = meilleur car position 0
+
+Tension résiduelle peut être traitée à l'aide d'un détecteur synchrone.
+
+
+
+![1549574093972](assets/1549574093972.png)
+
+![1549574126151](assets/1549574126151.png)
+
 ### Séance
+
+#### Plan des manipulations
+
+#####  LVDT position.
+
+Une tension alternative sera appliquée. la fréquence de la source sera appliquée afin de minimiser la tension résiduelle au zéro (origine) où V3-V2=0. Ainsi on trouve la position ou le V3-V2 est un minimale, puis on joue sur la fréquence. des bons de 1cm en position seront effectués, suivi d'une mesure de V3-V2.
+
+Tension utilisée: 2Vpp = 1.41VRMS sinusoide
+
+Fréquence utilisée:
+
+
+
+Mesures position
+
+| Position [ $\pm$ ] | V2 [mV $\pm$  ] | V3 [mV $\pm$  ] |
+| ------------------ | --------------- | --------------- |
+|                    |                 |                 |
+|                    |                 |                 |
+|                    |                 |                 |
+|                    |                 |                 |
+|                    |                 |                 |
+|                    |                 |                 |
+|                    |                 |                 |
+|                    |                 |                 |
+|                    |                 |                 |
+
+
+
+
+
+##### LVDT angulaire
+
+la position 0 est l'angle 0. On bougera la vis pour trouver ce 0, puis la fréquence utilisée servira à minimiser la tension résiduelle.
+
+Fréquence utilisée = 
+
+tension Vpp = 2V
+
+longueur de la plaque horizontale 46.5 $\pm$ 0.5 cm
+
+longueur de la tige verticale: 45 $\pm$ 0.5 cm
+
+On utilisera des bons de 0.20mm
+
+| Hauteur [mm $\pm$] | Angle tige [° $\pm$ 0] | V2 [mV $\pm$  ] | V3 [mV $\pm$  ] |
+| ------------------ | ---------------------- | --------------- | --------------- |
+|                    |                        |                 |                 |
+|                    |                        |                 |                 |
+|                    |                        |                 |                 |
+|                    |                        |                 |                 |
+|                    |                        |                 |                 |
+|                    |                        |                 |                 |
+|                    |                        |                 |                 |
+|                    |                        |                 |                 |
+|                    |                        |                 |                 |
 
 
 
