@@ -357,29 +357,59 @@ Tension résiduelle peut être traitée à l'aide d'un détecteur synchrone.
 
 #####  LVDT position.
 
-Une tension alternative sera appliquée. la fréquence de la source sera appliquée afin de minimiser la tension résiduelle au zéro (origine) où V3-V2=0. Ainsi on trouve la position ou le V3-V2 est un minimale, puis on joue sur la fréquence. des bons de 1cm en position seront effectués, suivi d'une mesure de V3-V2.
+Une tension alternative sera appliquée. la fréquence de la source sera appliquée afin de minimiser la tension résiduelle au zéro (origine) où V3-V2=0. Ainsi on trouve la position ou le V3-V2 est un minimale, puis on joue sur la fréquence. des bons de 5mm en position seront effectués, suivi d'une mesure de V3-V2.
 
-Tension utilisée: 2Vpp = 1.41VRMS sinusoide
+Tension utilisée: 2Vpp = 1.41VRMS sinusoide. (2.05V$\pm​$0.05)
 
-Fréquence utilisée:
+Fréquence utilisée: Par tâtonnements, une fréquence optimale de 3,016kHz afin de minimiser le déphase, minimiser le zéro résiduel (16mV C-C // 0mV moyenne)
 
-
+Le couplage moyen à 0 fait que la tension V3-V2 = 0
 
 Mesures position
 
-| Position [ $\pm$ ] | V2 [mV $\pm$  ] | V3 [mV $\pm$  ] |
-| ------------------ | --------------- | --------------- |
-|                    |                 |                 |
-|                    |                 |                 |
-|                    |                 |                 |
-|                    |                 |                 |
-|                    |                 |                 |
-|                    |                 |                 |
-|                    |                 |                 |
-|                    |                 |                 |
-|                    |                 |                 |
+| Position [ mm$\pm$0.5 ] | V3-V2(C-C)[mV $\pm$ 30] |
+| ----------------------- | ----------------------- |
+| 15.0                    | 590                     |
+| 20.0                    | 640                     |
+| 25.0                    | 620                     |
+| 30.0                    | 520                     |
+| 35.0                    | 380                     |
+| 37.0                    | 340                     |
+| 39.0                    | 240                     |
+| 40.0                    | 140                     |
+| 41.0                    | 100                     |
+| 42.0                    | 58                      |
+| 43.0                    | 20                      |
+| 44.0                    | 38                      |
+| 45.0                    | 76                      |
+| 47.0                    | 158                     |
+| 49.0                    | 226                     |
+| 52.0                    | 332                     |
+| 55.0                    | 422                     |
+| 60.0                    | 540                     |
+| 65.0                    | 600                     |
+| 70.0                    | 580                     |
 
-
+```markdown
+| Distance absolue [mm $\pm$ 0.5] | V3-V2 [mV $\pm$ 20] |
+| ------------------------------- | ------------------ |
+| 35.0                              | 320                |
+| 36.0                             | 292                |
+| 37.0                              | 260                |
+| 38.0                              | 220                |
+| 39.0                              | 184                |
+| 40.0                              | 144                |
+| 41.0                              | 108                |
+| 42.0                              | 64                 |
+| 43.0                              | 30                 |
+| 44.0                              | 40                 |
+| 45.0                              | 80                 |
+| 46.0                              | 120                |
+| 47.0                              | 160                |
+| 48.0                              | 192                |
+| 52.0                            | 332                |
+| 55.0                            | 422                |
+```
 
 
 
@@ -387,35 +417,443 @@ Mesures position
 
 la position 0 est l'angle 0. On bougera la vis pour trouver ce 0, puis la fréquence utilisée servira à minimiser la tension résiduelle.
 
-Fréquence utilisée = 
+Fréquence utilisée = 32.18kHz (minimiser la tension résiduelle et tout)
 
-tension Vpp = 2V
+tension Vpp = 2.77V
 
-longueur de la plaque horizontale 46.5 $\pm$ 0.5 cm
+longueur de la plaque horizontale 46.5 $\pm​$ 0.5 cm
 
 longueur de la tige verticale: 45 $\pm$ 0.5 cm
 
-On utilisera des bons de 0.20mm
+On utilisera des bons de 0.500mm
 
-| Hauteur [mm $\pm$] | Angle tige [° $\pm$ 0] | V2 [mV $\pm$  ] | V3 [mV $\pm$  ] |
-| ------------------ | ---------------------- | --------------- | --------------- |
-|                    |                        |                 |                 |
-|                    |                        |                 |                 |
-|                    |                        |                 |                 |
-|                    |                        |                 |                 |
-|                    |                        |                 |                 |
-|                    |                        |                 |                 |
-|                    |                        |                 |                 |
-|                    |                        |                 |                 |
-|                    |                        |                 |                 |
+côté positif
 
+| Hauteur [mm $\pm$0.005] | Angle tige [° $\pm$ 0] | V3-V2 [mV $\pm$ 10 ] |
+| ----------------------- | ---------------------- | -------------------- |
+| 14.425                  |                        | 40                   |
+| 15.000                  |                        | 70                   |
+| 15.500                  |                        | 120                  |
+| 16.000                  |                        | 170                  |
+| 16.500                  |                        | 250                  |
+| 17.000                  |                        | 300                  |
+| 17.500                  |                        | 370                  |
+| 18.000                  |                        | 430                  |
+| 18.200                  |                        | 460                  |
 
+côté négatif
+
+| Hauteur [mm 0.005] | Angle tige [°  0] | V3-V2 [mV  10 ] |
+| ------------------ | ----------------- | --------------- |
+| 14.000             |                   | 40              |
+| 13.500             |                   | 70              |
+| 13.000             |                   | 120             |
+| 12.500             |                   | 170             |
+| 12.000             |                   | 250             |
+| 11.500             |                   | 300             |
+| 11.000             |                   | 370             |
+| 10.500             |                   | 430             |
+| 10.000             |                   | 460             |
 
 ## Conditionnement
 
 ### Préparation
 
+On doit traiter un signal afin de s'assurer que sa propagation est efficace. IL peut y avoir des tensions parasites , du bruit, qui vient influencer la propagation sur des grandes distances.
+
+- Sans conditionnement ( perte de potentiel et bruit)
+- conversion tension-courant ( pas d'influence du bruit sur le courant) (unidirecitonnel)
+  - Le récepteur est seulement un résistance et on mesure variations potentiel aux bornes
+- conversion tension-fréquence
+  - modulation de la fréquence , immunisé des parasites, come le bruit n'a pas d'influence sur la fréquence
+- Conversion par multiplexage
+  - Le signal de multiples capteurs est envoyé sur une seule ligne de transmission et une seule de réception
+- Conversion Multiplexage dans le temps
+
+
+
 ### Séance
+
+#### Boucle de courant
+
+![1550179437248](assets/1550179437248.png)
+
+Vérifier la variation de courant en fonction de la tension (15 valeurs) et montrer la linéarité
+
+**LINÉARITÉ DU CAPTEUR**
+
+*Tension source signal: 0-5V*
+
+*Tension alimentation: 25$\pm​$*
+
+| Tension signal [V $\pm$ 0.05] | Courant [mA $\pm$ 0.05] |
+| ----------------------------- | ----------------------- |
+| 0.00                          | 5.38                    |
+| 0.51                          | 7.17                    |
+| 0.97                          | 8.50                    |
+| 1.48                          | 10.10                   |
+| 2.04                          | 11.62                   |
+| 2.60                          | 13.10                   |
+| 2.93                          | 14.21                   |
+| 3.52                          | 15.90                   |
+| 3.90                          | 17.04                   |
+| 4.49                          | 18.74                   |
+| 4.98                          | 20.10                   |
+
+![1550181879162](assets/1550181879162.png)
+
+- Observer les variation en fonctions des variation de la source d'alimentation (0-30V) par incrément de 2V avec une tension de signal de (2.50 $\pm​$ 0.05)V.
+
+**INFLUENCE DE LA SOURCE**
+
+| Tension alimentation [V $\pm$ 0.02] | Courant mesuré [mA $\pm$ 0.01] |
+| ----------------------------------- | ------------------------------ |
+| 0.00                                | 0.00                           |
+| 1.99                                | 0.03                           |
+| 3.00                                | 0.24                           |
+| 4.03                                | 5.31                           |
+| 3.41                                | 2.21                           |
+| 6.01                                | 10.85 $\pm$ 0.04               |
+| 8.00 $\pm$ 0.03                     | 12.68                          |
+| 9.97                                | 12.77                          |
+| 11.99                               | 12.81                          |
+| 15.01                               | 12.87                          |
+| 25.1 $\pm$ 0.1                      | 13.08 $\pm$ 0.02               |
+| 30.0 $\pm$ 0.1                      | 13.10                          |
+| 20.0 $\pm$ 0.1                      | 12.92                          |
+| 5.04                                | 9.57                           |
+
+!On remarque que la tension d'opération est minimalement de 8V. On remarqu également que la source de tension a une influence sur la résistance maximale que le circuit peut avoir avant d'être influencée.
+
+![1550179536989](../Instrumentation%20%5BGPH-2003%5D/assets/1550179536989.png)
+
+
+
+
+
+- On met une résistance variable avec une tension nominale et on observe la variation. du courant.
+
+**INFLUENCE DE LA RÉSISTANCE**
+
+| Résistance utilisée [$\Omega$ $\pm$ 10%] | Courant mesuré [mA $\pm$ 0.05] |
+| ---------------------------------------- | ------------------------------ |
+| 0                                        | 12.97                          |
+| 100                                      | 12.94                          |
+| 500                                      | 12.88                          |
+| 1000                                     | 12.66                          |
+| 2000                                     | 9.75                           |
+| 3000                                     | 6.76                           |
+| 4000                                     | 5.15                           |
+| 5000                                     | 4.15                           |
+| 10000                                    | 2.12                           |
+| 20000                                    | 1.07                           |
+
+On devrait s'attendre à une transmission constante peu importe la résistance de transmission. On remarque évidemment que la source n,est pas capable de fournir pour des résistance de plus de 1000Ohms. Le commence à diminuer considérablement.
+
+- La mesure que vous venez de faire conﬁrme-t-elle celle que vous avez faite dans la deuxième partie?	
+
+  > Avec les mesures de la deuxieme partie, on remarque que le point d'opération est d'environ 8V. Ayant mise la source à 25V, on devrait pouvoir se permettre un $\Delta V$ d'environ 17V avant d'atteindre ce point d'opération. Si on calcule cela, disons que l'opération normale est à 13mA, une chute de 17 correspondrait à  $\frac{17}{0.013}=1307\Omega​$.Comme observé, la résistance de coupure se trouve dans les environs de la résistance calculée.
+
+- Si vous aviez à installer une boucle de courant pour la plage normale de 4 mA à 20 mA, quelle serait la résistance maximale utilisable avec une source d’alimentation de 30 V?
+
+  >La résistance maximale acceptable serait 1100$\Omega$, car on aurait 22Volts de jeu et un courant maximal de 20mA. Ainsi, une résistance de 1100 engendrerait 22V de déscente avec 20mA.
+
+  
+
+#### Multiplexage fréquence
+
+*Vérifier selon le protocol*
+
+- ajuster à 0 la sortie des DEMUX pour entrée de 0
+- faire une mesure de la fréquence selon la tension (vérifier la linéarité)
+- Tester la linéarité du DEMUX
+- Faire un test de bande passante en faissant varier la fréquence d'entrée
+- Faire un test  du MUX en appuyant sur les 3 signaux simultanément,
+
+![1550179641441](assets/1550179641441.png)
+
+
+
+##### Mesure de la modulation en fréquence en fonction de la tension d'entrée:
+
+| Tension signal [V $\pm$ 0.05] | Fréquence [kHz $\pm$ 0.01] |
+| ----------------------------- | -------------------------- |
+| 0.00                          | 10.00                      |
+| 0.52                          | 10.07                      |
+| 0.97                          | 10.14                      |
+| 1.51                          | 10.21                      |
+| 2.00                          | 10.28                      |
+| 2.45                          | 10.34                      |
+| 3.01                          | 10.43                      |
+| 3.49                          | 10.50                      |
+| 3.97                          | 10.56                      |
+| 4.47                          | 10.64                      |
+| 4.95                          | 10.71                      |
+
+- L'amplitude du signal Vpp est de 1.40V
+
+
+
+##### Mesure de la démodulation du DEMUX en fonction de la fréquence du signal d'entrée:
+
+- On testera la linéarité du capteur en faisant varier la fréquence de la tension d'entrée dans la plage du filtre passe bande du démux. 
+
+| Fréquence générée [KHz $\pm$ 0.01] | Tension [V $\pm$ 0.01] |
+| ---------------------------------- | ---------------------- |
+| 9.50                               | 3.43                   |
+| 9.60                               | 2.75                   |
+| 9.70                               | 2.05                   |
+| 9.80                               | 1.35                   |
+| 9.90                               | 0.64                   |
+| 10.00                              | -0.05                  |
+| 10.10                              | -0.75                  |
+| 10.20                              | -1.46                  |
+| 10.30                              | -2.17                  |
+| 10.40                              | -2.88                  |
+| 10.50                              | -3.59                  |
+
+##### Mesure de la linéarité de la transmission du signal (modulation et démodulation):
+
+| Tension d'entrée [V $\pm$ 0.01] | Tension [V $\pm$ 0.01] |
+| ------------------------------- | ---------------------- |
+| 0.00                            | 0.00                   |
+| 0.45                            | 0.47                   |
+| 1.00                            | 1.03                   |
+| 1.99                            | 2.04                   |
+| 2.47                            | 2.54                   |
+| 3.01                            | 3.09                   |
+| 3.51                            | 3.60                   |
+| 4.05                            | 4.17                   |
+| 4.45                            | 4.57                   |
+| 4.88                            | 5.01                   |
+
+Test de la bande passante du modulateur 
+
+- Tension de référence 1.76V
+- Signal à 0.707 (1.24V) sera la fréquence de coupure.-3db
+- La fréquence de coupure de modulation du signal est 800Hz.
+
+| Canal       | Amplitude d'entrée [V $\pm$ 0.05] | Fréquence d'entrée [Hz $\pm$ 0.5] | Amplitude sortie [V $\pm$ 0.05] | Fréquence de sortie [Hz $\pm$ 0.5] |
+| ----------- | --------------------------------- | --------------------------------- | ------------------------------- | ---------------------------------- |
+| 1 (10kHz)   | 1.68                              | 100.0                             | 1.76                            | 100.0                              |
+| 2 (15kHz)   | 3.14                              | DC                                | 2.94                            | DC                                 |
+| 3 (22.5kHz) | 3.99                              | DC                                | 4.09                            | DC                                 |
+
+La linéarité a été observée pour tous les appareils. Le convertisseur de tension-courant permet une transmission de données linéaire. Le multiplexeur permet l'envoi de plusieurs signaux et leur démultiplexage. avec un gain environ unitaire. ON a pu ob
+
+### Amplification d'instrumentation
+
+[1] Protocole de laboratoire [disponible ici](https://sitescours.monportail.ulaval.ca/contenu/sitescours/036/03613/201901/site103274/accueil/bloctexte545794/ressourcestexte/NotesDeCours%20GPH-2003.pdf?identifiant=1d53dc8887cf78038c83287e866aaea46c688607) [p.17].
+
+### But
+
+*Le but de ce laboratoire est, d’une part, d’étudier le fonctionnement d’un amplificateur d’instrumentation et, d’autre part, d’en concevoir et construire un modèle qui respecte une liste de critères* *préétablis[1].*
+
+### Préparation
+
+##### *1. Amplificateur opérationnel*
+
+- Très grande impédance d'entrée, grand gain, faible impédance de sortie.
+- Comparateur 
+- Gain : $$V_{out} = G_d(V_{in+} - V_{in-})$$
+- Généralement gain très grand
+
+##### *2. Suiveur de tension*
+
+- Vin = Vout
+- Reproduit la tension à Vin sans l'affecter. 
+- Vin doit être entre Vcc+ et Vcc-
+
+##### *3. Amplificateur différentiel*
+
+- Permet de connaître la différence de potentiel entre deux points d'un circuit, tout en l'amplifiant selon les besoins. 
+- Gain fixé par les valeurs des résistances utilisées: $$G_d = \frac{R_2}{R_1}$$
+
+##### *4. Gain en mode commun*
+
+- Partie du gain qui dépend de la moyenne des deux potentiels d'entrée. 
+
+- Le taux de réjection du mode commun: $$ TRMC = \frac{G_d}{G_{mc}}$$
+
+##### *5. Amplificateur d'instrumentation*
+
+- Circuit différentiel qui diminue les imperfections
+- Équation du gain: $G_D = \left( 1 + \frac{2R_1}{R_4}\right) \frac{R_3}{R_2} ​$, dans un monde idéal G_mc = 0 mais jamais le cas
+- Pour aider aux manipulations, on ajuste généralement uniquement R4 (avec résistance variable). 
+
+L'ampli utilisé est le UA741. Le PINOUT est illustré ci-contre:
+
+![1550785757601](assets/1550785757601.png)
+
+### Manipulation
+
+##### Analyse de l'amplificateur différentiel
+
+On mesure Vout en fonction de Vmoy (V1 + V2)/2 en changeant Vmoy sans modifier deltaV. On effectuera une prise de mesures par incréments de 0.5 V sur la plage d'intérêt.
+
+| [V  0.01] | [V  0.001] |
+| --------- | ---------- |
+| 0.50      | 1.003      |
+| 1.00      | 1.005      |
+| 1.50      | 1.007      |
+| 2.00      | 1.009      |
+| 2.50      | 1.012      |
+| 3.00      | 1.015      |
+| 3.50      | 1.017      |
+| 4.00      | 1.019      |
+| 4.50      | 1.020      |
+| 5.00      | 1.021      |
+| 5.50      | 1.024      |
+
+- Gain en mode commun mesuré (pente du graphique) = 
+
+**INSÉRER GRAPHIQUE ICI**
+
+
+
+On mesure maintenant Vout en fonction de deltaV. On change deltaV en gardant Vmoy constant. On effectuera des Incréments de 1V sur la plage d'intérêt. On garde une moyenne de 7.5V.
+
+| [mV  0.01] | [V  0.001] |
+| ---------- | ---------- |
+| 0          | 0.017      |
+| 1          | 1.017      |
+| 2          | 2.02  0.01 |
+| 3          | 3.02  0.01 |
+| 4          | 4.02  0.01 |
+| 5          | 5.02  0.01 |
+| 6          | 6.03  0.01 |
+| 7*         | 7.03  0.01 |
+
+- Gain différentiel mesuré (pente) = 
+
+
+
+##### Analyse de l'amplificateur d'instrumentation
+
+- Faire le montage de l'amplificateur d'instrumentation (**Figure 4**) avec chaque résistance à 1k$\Omega$
+- Déterminer les gains (gain différentiel théorique de 3):
+
+On mesure Vout en fonction de Vmoy (V1 + V2)/2 en changeant Vmoy sans modifier deltaV. Prise de mesures par incréments de 1 V sur la plage d'intérêt.
+
+La source de la tensions a été augmentée à -14V +15V afin de permetre au gain de 3 de sortir une tension sans être limité par la source sur une plus grande plage. 
+
+| [mV  0.01] | [V  0.01] |
+| ---------- | --------- |
+| 0.50       | 3.02      |
+| 1.00       | 3.02      |
+| 1.50       | 3.02      |
+| 2.00       | 3.02      |
+| 2.50       | 3.02      |
+| 3.00       | 3.02      |
+| 3.50       | 3.02      |
+| 4.00       | 3.02      |
+| 4.50       | 3.02      |
+| 5.00       | 3.02      |
+
+- Gain en mode commun mesuré (pente du graphique) = 
+
+  
+
+On mesure maintenant Vout en fonction de deltaV. On change deltaV en gardant Vmoy constant
+
+- Incréments de 1V sur la plage d'intérêt. On garde une moyenne de 7.5V.
+
+  | [mV  0.01] | [V  0.001]  |
+  | ---------- | ----------- |
+  | 0.00       | 0.022       |
+  | 0.50       | 1.523       |
+  | 1.00       | 3.03  0.01  |
+  | 1.50       | 4.53  0.01  |
+  | 2.00       | 6.03  0.01  |
+  | 2.50       | 7.54  0.01  |
+  | 3.00       | 9.05  0.01  |
+  | 3.50       | 10.54  0.01 |
+  | 4.00       | 12.05  0.01 |
+
+- Gain différentiel mesuré (pente) = 
+
+
+
+- En ajoutant une asymétrie à l’endroit approprié, quantifiez l’effet d’une disparité entre
+  deux résistances (pour les couples R1, R2 et R3). Quels sont les effets sur Gd et Gmc ?
+
+- On fera varier la résistance de 1k vers 500Ohms. pour tous les tests.
+
+- 3 points différents seront utilisées pour ces mesures.
+
+  - **Test de disparité sur R1:** 
+
+    - On prend 3 points d'intérêt avec deltaV de 1 et moyenne variable entre 1, 3 et 5V. 
+
+    | $V_{moy}$ [V $\pm$ 0.01] | $V_{out}$ [V $\pm$ 0.01] |
+    | ------------------------ | ------------------------ |
+    | 1.00                     | 2.51                     |
+    | 3.00                     | 2.51                     |
+    | 5.00                     | 2.51                     |
+
+    - Delta V de 1, 2 et 3V avec moyenne constante à 5V.
+
+    | $\Delta V$ [V $\pm$ 0.01] | $V_{out}$ [V $\pm$ 0.01] |
+    | ------------------------- | ------------------------ |
+    | 1.00                      | 2.51                     |
+    | 2.00                      | 5.02                     |
+    | 3.00                      | 7.52                     |
+
+  - **Test de disparité sur R2:** 
+
+    - On prend 3 points d'intérêt avec deltaV de 1 et moyenne variable entre 1, 3 et 5V. 
+
+    | $V_{moy}$ [V $\pm$ 0.01] | $V_{out}$ [V $\pm$ 0.01] |
+    | ------------------------ | ------------------------ |
+    | 1.00                     | 3.85                     |
+    | 3.00                     | 4.52                     |
+    | 5.00                     | 5.19                     |
+
+    - Delta V de 1, 2 et 3V avec moyenne constante à 5V.
+
+    | $\Delta V$ [V $\pm$ 0.01] | $V_{out}$ [V $\pm$ 0.01] |
+    | ------------------------- | ------------------------ |
+    | 1.00                      | 5.19                     |
+    | 2.00                      | 8.72 $\pm$ 0.02          |
+    | 3.00                      | 12.20                    |
+
+  - **Test de disparité sur R3:** 
+
+    - On prend 3 points d'intérêt avec deltaV de 1 et moyenne variable entre 1, 3 et 5V. 
+
+    | $V_{moy}$ [V $\pm$ 0.01] | $V_{out}$ [V $\pm$ 0.01] |
+    | ------------------------ | ------------------------ |
+    | 1.00                     | 2.14                     |
+    | 3.00                     | 2.64                     |
+    | 5.00                     | 3.15                     |
+
+    - Delta V de 1, 2 et 3V avec moyenne constante à 5V.
+
+    | $\Delta V$ [V $\pm$ 0.01] | $V_{out}$ [V $\pm$ 0.01] |
+    | ------------------------- | ------------------------ |
+    | 1.00                      | 3.15                     |
+    | 2.00                      | 5.03                     |
+    | 3.00                      | 6.95                     |
+
+  - Après avoir rééquilibré toutes les résistances (pour réobtenir le circuit de la figure 2.6), remplacez la résistance R4 par une résistance variable. Quels sont les effets de sa valeur sur Gd et Gmc ?
+
+    - On prend 3 points d'intérêt avec deltaV de 1 et moyenne variable entre 1, 3 et 5V. 
+
+    | $V_{moy}$ [V $\pm$ 0.01] | $V_{out}$ à 500$\Omega$ [V $\pm$ 0.01] | $V_{out}$ à 1k$\Omega$ [V $\pm$ 0.01] | $V_{out}$ à 2k$\Omega$ [V $\pm$ 0.01] | $V_{out}$ à 5k$\Omega$ [V $\pm$ 0.01] |
+    | ------------------------ | -------------------------------------- | ------------------------------------- | ------------------------------------- | ------------------------------------- |
+    | 1.00                     | 4.93                                   | 2.98                                  | 2.00                                  | 1.41                                  |
+    | 3.00                     | 4.93                                   | 2.98                                  | 2.00                                  | 1.41                                  |
+    | 5.00                     | 4.94                                   | 2.99                                  | 2.01                                  | 1.41                                  |
+
+    - Delta V de 1, 2 et 3V avec moyenne constante à 5V.
+
+    | $\Delta V$ [V $\pm$ 0.01] | $V_{out}$ à 500$\Omega$ [V $\pm$ 0.01] | $V_{out}$ à 1k$\Omega$ [V $\pm$ 0.01] | $V_{out}$ à 2k$\Omega$ [V $\pm$ 0.01] | $V_{out}$ à 5k$\Omega$ [V $\pm$ 0.01] |
+    | ------------------------- | -------------------------------------- | ------------------------------------- | ------------------------------------- | ------------------------------------- |
+    | 1.00                      | 4.94                                   | 2.99                                  | 2.01                                  | 1.41                                  |
+    | 2.00                      | 9.88                                   | 5.96                                  | 4.00                                  | 2.81                                  |
+    | 3.00                      | sat                                    | 8.94                                  | 6.00                                  | 4.22                                  |
+
+- Quels sont les effets de sa valeur sur Gd et Gmc ?
 
 
 
@@ -423,9 +861,158 @@ On utilisera des bons de 0.20mm
 
 ### Préparation
 
-### Séance
+Types de capteurs étudiés
+
+- Résistance métallique
+  - Résistance pure variant avec la température dont le comportement peut être parfaitement modélisé (cristal pure) $$R=\frac{V}{I}$$ avec un R(T) connu.
+  - On doit prendre en compte la résistance des fils. Si il est possible de négliger les fils, On utilise directement l'ohmètre. Si on ne peut pas négliger on mesure comme ceci:
+  - ![1551383747903](assets/1551383747903.png)
+  - La relation obtenue devrait être environ linéaire. Si on doit tenir en compte la courbe de la pente, on peut utiliser deux méthodes: mesurer et hardcoder une table des valeurs dans un ordinateur qui associe une mesure à une valeur. Ou approximer par une fonction analytique $$R=R_0(1_\alpha T + \beta T^2 + ...)$$
+- Thermistance
+  - résistance variant énormément avec la température. La relation est hautement non linéaire, mais peut être modélisée analytiquement par la relation de Steinhart-Hart
+    $$\frac{1}{T}=A+B\ln|R|+C\ln(|R|^3)$$
+  - Les valeurs ABC sont obtenues par étalonnage. Cette équation permet une précision de 0,02 degrés sur une plage de 100 degrés
+- Jonction de semi-conducteur
+  - Le réchauffement d'un jonction PN modifie la tension seuil de celui-ci à cause de la plus grande tension de dérive. Ainsi, on peut grapher la tension au borne du transistor/diode en fonction de la témpérature, qui sera une relation linéarie.
+- Thermocouple
+  - Effet seebeck $$V=\alpha T$$
+  - Grande plage d'utilisation
+  - Sensibilité faible (0.04mV/degré)
+  - pas totalement linéaire, le coefficient alpha dépend de la température
+  - Les connections forment un thermocouple suppoémentaire qui peut etre annulé en connaissant V généré par le thermicouple cuivre-cuivre.
+- éTALONNAGE DES CAPTEURS.
+  - Les températures facilement reproductibles en laboratoire pour l'étallonnage des capteurs sont les suivantes:![1551385842613](assets/1551385842613.png)
+
+- Thermomètre à radiation
+  - $$P=\epsilon \sigma T^4​$$
+  - On doit utiliser un système  optique devant le capteur qui servira à concentrer la la radiation sur le capteur et à déterminer la région sur la laquelle la radiation est mesurée.
+  - Pour le système optique, Énerige majoritairement dans l'infrarouge, mais les lentilles classique ne laissent pas passer infrarouge, on doit utiliser des lentille fancy exotiques ou des fentres, mais il y aura une réflection importante.
+  - Le détecteur est soit quantique ou thermique .
+    Quantique: effet photoélectrique, le photon agit directement (phototransistor, photodiodes,PMT, etc.)
+    Thermique: absorbent les photons et on mesure la température. On place une thermopile au centre du foyer d'un mirroir
+- Calculs
+  - quand tout est à temperature ambiante, on obtenient quand même une puissance mesurée qui provient de la radiation de l'environnement. ainsi, on veut la différence avec la température mesurée et la température ambiante. $$V = c(T_1^4-T_a^4)$$ l'exposant dépend de la thermipile utilisée et la consatnte est trouvée à travers un étalonnage
+
+#### Manipulations
+
+Comparaison de l'étalonnage secondaire sur les différents types de capteurs. Il s'agira de comparer avec avec un capteur préétabli.
+
+On brachera les capteurs sur un acquisitionneur afin de pouvoir effectué l'étalonnage conjointement de plusieurs capteurs
+
+Pour le thermocouple et la résistance platine, on décidera une plage de variation qui monte jusqu'à 200°C. Les thermistances et jonction PN seront soumises jusqu'à 100°C
+
+### Protocol
+
+L'étalonnage des 5 capteurs suivants sera fait simultanément dans un bassin de sable allant de Ta à 200°C:
+
+- Thermocouple non gainé
+- Thermocouple gainé
+- Résistance de platinium
+- Thermistance
+- Jonction PN
+
+- Finalement, après plusieurs essais le montage a été changé.  La diode et la thermistance ont été placés dans un bécher contenant de l'eau sur une plaque chauffante. Les Capteurs diode et thermistance ont été mesuré en même temps sur une plage de [T de départ, par bonds de 5, jusqu'à 100°C.].
 
 
+
+​				**Tableau 1: Mesure de la dérive de tension du thermocouple**
+
+| Température Ref [°C $\pm$0.01] | Tension mesurée [V $\pm$ 0.001] |
+| ------------------------------ | ------------------------------- |
+| Amb                            |                                 |
+| 25.00                          |                                 |
+| 30.00                          |                                 |
+| 35.00                          |                                 |
+| 40.00                          |                                 |
+| 45.00                          |                                 |
+| 50.00                          |                                 |
+| 55.00                          |                                 |
+| ....                           |                                 |
+
+- La Température pour les thermocouples a été prise dans le bac de sable pour des températures de 100 à 200°C
+
+- La température pour les thermocouples a été prise dans l'eau bouillante pour des températures  de Tamb à T=100°C
+
+​				**Tableau 2: Mesure de la dérive de tension du thermocouple gainé**
+
+| Température Ref [°C 0.01] | Tension mesurée [V  0.001] |
+| ------------------------- | -------------------------- |
+| Amb                       |                            |
+| 25.00                     |                            |
+| 30.00                     |                            |
+| 35.00                     |                            |
+| 40.00                     |                            |
+| 45.00                     |                            |
+| 50.00                     |                            |
+| 55.00                     |                            |
+| ....                      |                            |
+
+​	
+
+La diode a été alimentée avec un courant de 1mA (0.9861mA $\pm​$ 0.001)
+
+​		**Tableau 3 : Mesure de la dérive de la tension de seuil de la diode suite à une variation de courant, lorsque qu'alimenté à courant constant de 1mA.**
+
+| Température Ref [°C 0.01] | Tension mesurée [mV  0.001] |
+| ------------------------- | --------------------------- |
+| Amb                       |                             |
+| 25.00                     |                             |
+| 34.0                      | 569.1                       |
+| 35.00                     | 566.5                       |
+| 40.00                     | 554.4                       |
+| 45.00                     | 545.9                       |
+| 50.00                     | 534.0                       |
+| 55.00                     | 523.6                       |
+| 60.0                      | 514.3                       |
+| 65.0                      | 502.9                       |
+| 70.0                      | 492.1                       |
+| 75.0                      | 481.6                       |
+| 80.0                      | 470.5                       |
+| 85.0                      | 459.9                       |
+| 90.0                      | 451.2                       |
+| 95.0                      | 437.7                       |
+| 99.5                      | 430.4                       |
+
+- Les températures ont été prises dans de l'eau sur une plaque chauffante de Tambiant à 100°C par incréments de 5°C
+
+  
+
+Tableau 1: Mesure de la dérive de la résistance de la thermistance en fonction de la tension
+
+| Température Ref [°C 0.1] | Résistance mesurée [V  0.3] |
+| ------------------------ | --------------------------- |
+| Amb                      |                             |
+| 32.1                     | 178.07                      |
+| 35.0                     | 161.1                       |
+| 40.0                     | 140.1                       |
+| 45.0                     | 123.7                       |
+| 50.0                     | 106.7                       |
+| 55.0                     | 94.0                        |
+| 60.0                     | 83.2 $\pm 0.5$              |
+| 65.0                     | 73.3                        |
+| 70.0                     | 64.7                        |
+| 75.0                     | 57.4                        |
+| 80.0                     | 51.1                        |
+| 85.0                     | 45.6                        |
+| 90.0                     | 41.0                        |
+| 95.0                     | 36.3                        |
+| 99.7                     | 32.8                        |
+| 100.0                    |                             |
+|                          |                             |
+
+- Les températures ont été prises dans de l'eau sur une plaque chauffante de Tambiant à 100°C par incréments de 5°C
+
+
+
+Pour la mesure du capteur Radiatif, celui-ci a été placé à une distance de 35cm. la plaque chauffante a été branchée puis chauffée jusqu'à une température de 250°C. Les mesures ont été prises  de Tambiant à 250°C. Sur la plage de valeur de 0 à 80°C, les variations étaient à peine perceptibles et les oscillations étaient très grandes. Cela peut-être causé par le fait que la radiation d'arrière plan est facilement perturbable.  
+
+
+
+La mesure de la réponse dynamique des thermocouples a été mesuré en plongeant les thermomètres dans de la glace alors qu'il étaient précédemment dans l'eau bouillante. Le régime permanent a été attendu.
+
+Non gainé 11s
+
+gainé 20s
 
 ## Capteur de Position Angulaire
 
