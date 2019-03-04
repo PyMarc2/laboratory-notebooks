@@ -6,6 +6,9 @@
 
 ## LABVIEW
 
+***date***: 25 janvier 2019
+***coéquipiers***: Anais Parrot & Myryk Gaudreault
+
 ### Préparation
 
 - Langage de programmation **G** .
@@ -100,7 +103,7 @@ Colonne 5 = Fourier
 
 ## Capteur de Courant
 
-***date***: 1 février
+***date***: 1 février 2019
 ***coéquipiers***: Anais Parrot & Jordan Bourgault
 ***but***:comparer deux types de capteurs de courant: résistifs et à effet Hall
 
@@ -316,13 +319,12 @@ même chose fréquence de coupure =30kHz
 | Bande passante    |               |              |
 | Synthèse          |               |              |
 
-Quel capteur est meilleur? Dans quelles situations l'un est-il plus avantageux que l'autre?
-
-
-
 
 
 ## Capteur de Position Linéaire
+
+***date***: 8 février 2019
+***coéquipiers***: Anais Parrot & Myryk Gaudreault
 
 ### Préparation
 
@@ -457,6 +459,9 @@ côté négatif
 
 ## Conditionnement
 
+***date***: 15 février 2019
+***coéquipiers***: Anais Parrot & Ludovick Bégin & Hubert Audet
+
 ### Préparation
 
 On doit traiter un signal afin de s'assurer que sa propagation est efficace. IL peut y avoir des tensions parasites , du bruit, qui vient influencer la propagation sur des grandes distances.
@@ -500,9 +505,13 @@ Vérifier la variation de courant en fonction de la tension (15 valeurs) et mont
 | 4.49                          | 18.74                   |
 | 4.98                          | 20.10                   |
 
+![tension-courant](assets/tension-courant.png)
+
+
+
 ![1550181879162](assets/1550181879162.png)
 
-- Observer les variation en fonctions des variation de la source d'alimentation (0-30V) par incrément de 2V avec une tension de signal de (2.50 $\pm​$ 0.05)V.
+- Observer les variation en fonctions des variation de la source d'alimentation (0-30V) par incrément de 2V avec une tension de signal de (2.50 $\pm$ 0.05)V.
 
 **INFLUENCE DE LA SOURCE**
 
@@ -522,6 +531,8 @@ Vérifier la variation de courant en fonction de la tension (15 valeurs) et mont
 | 30.0 $\pm$ 0.1                      | 13.10                          |
 | 20.0 $\pm$ 0.1                      | 12.92                          |
 | 5.04                                | 9.57                           |
+
+![alim_tc](assets/alim_tc.png)
 
 !On remarque que la tension d'opération est minimalement de 8V. On remarqu également que la source de tension a une influence sur la résistance maximale que le circuit peut avoir avant d'être influencée.
 
@@ -641,7 +652,10 @@ Test de la bande passante du modulateur
 
 La linéarité a été observée pour tous les appareils. Le convertisseur de tension-courant permet une transmission de données linéaire. Le multiplexeur permet l'envoi de plusieurs signaux et leur démultiplexage. avec un gain environ unitaire. ON a pu ob
 
-### Amplification d'instrumentation
+## Amplification d'instrumentation
+
+***date***: 22 février 2019
+***coéquipiers***: Ludovick Bégin
 
 [1] Protocole de laboratoire [disponible ici](https://sitescours.monportail.ulaval.ca/contenu/sitescours/036/03613/201901/site103274/accueil/bloctexte545794/ressourcestexte/NotesDeCours%20GPH-2003.pdf?identifiant=1d53dc8887cf78038c83287e866aaea46c688607) [p.17].
 
@@ -858,6 +872,9 @@ On mesure maintenant Vout en fonction de deltaV. On change deltaV en gardant Vmo
 
 
 ## Capteur de Température
+
+***date***: 1 mars 2019
+***coéquipiers***: Anais Parrot - Étienne Ransford - Quentin Auget
 
 ### Préparation
 
