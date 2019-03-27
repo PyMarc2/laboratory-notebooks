@@ -1026,9 +1026,108 @@ gainé 20s
 
 ### Préparation
 
+Types de capteurs: 
+
+- Débitmètre à turbine
+  - Liquides et les gazs
+  - Dynamo-miniature-
+  - grande précision
+- Débitmètre à aubes
+  - vitesse de rotation proportionnelle à celle du liquide
+  - rotation mesurée électriquement ou optiquement
+  - aimant qui tourne avec bobine. Il y aura un V indui
+- perturbation thermique
+  - chauffe un fil avec impuilsion qui chaufe liquide
+  - capteur placé plus loin vient détecter le liquide cahuffé oin peut alors déteerminer la distance qu'elle a parcourue
+- Débitmèetre à orifice
+  - capteur de pression différentiel qui mesure la différence de pression pour un chabgement de section de tuyau connu. On peut déterminer la vitesse avec les équations de bernouilli
+- Débit metre à capteur chauffé
+  - ON regarde le RP en chauffant un fil dans le truc
+- DÉbitmètre par effet doppler
+  - vibrations acoustiques f_1 dans le liquide
+- Débitmètre à temps de propagation
+  - Ultrasons pulsés en paquet sont propagés, le temps que cela prend dépend directement de la vitesse du fluide, car celui-ci a un composante en cos()
+- Débitmètre à déphasage
+  - Au lieu d'un 
+
+**Matériel:**
+
+ 2 conduites en plexiglas ;
+— ventilateur à débit variable ;
+— tube de Pitot ;
+— jauge de pression ;
+— transmetteur et récepteur pour le débitmètre à temps de propagation ;
+— transmetteur et récepteur pour le débitmètre à déphasage ;
+— oscilloscope ;
+— câbles, fils et adaptateurs.
+
+**Manipulations:**
+
+À déterminé durant la période de labo
+
+Angle du capteur: 45$\pm​$5
+
+****
+
 ### Séance
 
+Débitmètre déphasage
 
+UN variac est branché au ventillateur. Celui-ci est connecté à un tube qui contient le capteur à angle avec un tube de pitot au bout pour déterminer la vitesse du fluide
+
+DImètre du tube: 8.0cm
+
+Longeur du tube pour capteur: 26.0cm
+
+| $\Delta P$ | $V_{fluide}$ | $\Delta \phi$ $\pm$ 5 |
+| ---------- | ------------ | --------------------- |
+| 0          |              | -95 $\pm$ 5           |
+| 10         |              | -71$\pm$2             |
+| 17         |              | -62 $\pm$1            |
+| 23         |              | -57 $\pm$ 1           |
+| 34         |              | -50$\pm$0.5           |
+| 44         |              | -44$\pm$1             |
+| 65         |              | -33                   |
+| 71         |              | -31                   |
+| 76         |              | -29                   |
+| 80         |              | -26                   |
+| 84         |              | -25                   |
+|            |              |                       |
+|            |              |                       |
+|            |              |                       |
+
+$$V=\sqrt{\frac{2(P_{tot}-P_{stat})}{\rho}}$$
+
+À l'aide du tube de Pitot, on mesure la vitesse du fluide avec la formule ci-dessus.
+
+Débitmètre à temps de transit
+
+DImètre du tube: 8.0cm
+
+Longeur du tube pour capteur: 23.8cm
+
+P-P:308mV
+
+P-P: 7.12
+
+| $\Delta P$ $\pm $1 | $V_{fluide}$ | $\Delta t$$\pm $0.1 |
+| ------------------ | ------------ | ------------------- |
+| 0                  |              | 750.8               |
+| 6                  |              | 748.4               |
+| 9                  |              | 747.6               |
+| 14                 |              | 746.6               |
+| 24                 |              | 746.4               |
+| 29                 |              | 746.0               |
+| 43                 |              | 744.2               |
+| 50                 |              | 744.4               |
+| 56                 |              | 743.6               |
+| 62                 |              | 743.2               |
+| 64                 |              | 743.2               |
+|                    |              |                     |
+
+$$V=\sqrt{\frac{2(P_{tot}-P_{stat})}{\rho}}$$
+
+À l'aide du tube de Pitot, on mesure la vitesse du fluide avec la formule ci-dessus.
 
 ## Capteur de Pression
 
