@@ -1096,26 +1096,47 @@ DImètre du tube: 8.0cm
 
 Longeur du tube pour capteur: 26.0cm
 
-| $\Delta P$ | $V_{fluide}$ | $\Delta \phi$ $\pm$ 5 |
-| ---------- | ------------ | --------------------- |
-| 0          |              | -95 $\pm$ 5           |
-| 10         |              | -71$\pm$2             |
-| 17         |              | -62 $\pm$1            |
-| 23         |              | -57 $\pm$ 1           |
-| 34         |              | -50$\pm$0.5           |
-| 44         |              | -44$\pm$1             |
-| 65         |              | -33                   |
-| 71         |              | -31                   |
-| 76         |              | -29                   |
-| 80         |              | -26                   |
-| 84         |              | -25                   |
-|            |              |                       |
-|            |              |                       |
-|            |              |                       |
+| $\Delta P$$\pm​$ 4 | $\Delta \phi$ $\pm​$ 5                         |
+| ----------------- | --------------------------------------------- |
+| 0                 | -95 $\pm$ 5                                   |
+| 10                | -71$\pm$2                                     |
+| 17                | -62 $\pm$1                                    |
+| 23                | -57 $\pm$ 1                                   |
+| 34                | -50$\pm$0.5                                   |
+| 44                | -44$\pm$1                                     |
+| 65                | -33                                           |
+| 71                | -31                                           |
+| 76                | -29                                           |
+| 80                | -26                                           |
+| 84                | -25                                           |
+|                   | $$V=\sqrt{\frac{2(P_{tot}-P_{stat})}{\rho}}$$ |
 
-$$V=\sqrt{\frac{2(P_{tot}-P_{stat})}{\rho}}$$
+
+
+| Vitesse de l'air [$m/s$] | Déphasage [$\Delta \phi$ $\pm$ 5] |
+| ------------------------ | --------------------------------- |
+| 0$\pm$0                  | -95                               |
+| 4.1$\pm$1.4              | -71$\pm$2                         |
+| 5.4$\pm$1.1              | -62 $\pm$1                        |
+| 6.2$\pm$0.9              | -57 $\pm$1                        |
+| 7.6$\pm$0.8              | -50$\pm$1                         |
+| 8.6$\pm$0.6              | -44$\pm$1                         |
+| 10.5$\pm$0.6             | -33                               |
+| 11.0$\pm$0.6             | -31                               |
+| 11.3$\pm$0.5             | -29                               |
+| 11.6$\pm$0.5             | -26                               |
+| 11.9$\pm$0.5             | -25                               |
+|                          |                                   |
 
 À l'aide du tube de Pitot, on mesure la vitesse du fluide avec la formule ci-dessus.
+
+densité de l'air à 25C et 1atm. = 1.1839kg/m3
+
+l'incertitude à été calculée avec les opérations sur l'incertitude.
+
+
+
+
 
 Débitmètre à temps de transit
 
