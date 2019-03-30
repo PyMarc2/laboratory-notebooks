@@ -1,4 +1,4 @@
-| Tension d'entrée [V $\pm$ 0.05] | Fréquence de la sortie [kHz $\pm$ 0.01] |
+ Tension d'entrée [V $\pm$ 0.05] | Fréquence de la sortie [kHz $\pm$ 0.01] |
 | ----------------------------- | -------------------------- |
 | 0.00                          | 10.00                      |
 | 0.52                          | 10.07                      |
