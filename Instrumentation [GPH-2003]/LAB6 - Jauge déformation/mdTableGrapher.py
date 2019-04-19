@@ -7,7 +7,7 @@ from matplotlib.ticker import (MultipleLocator, FormatStrFormatter,AutoMinorLoca
 
 zeroXFactor = 0
 
-filename = "deformation2.txt"
+filename = "pression1.txt"
 
 with open(filename, "r") as file:
     lines = file.readlines()
@@ -51,8 +51,8 @@ ax = fig.add_subplot(111)
 # ========= TICKS SETTINGS ===========
 majorLocator = MultipleLocator(2)
 majorFormatter = FormatStrFormatter('%d')
-xminorLocator = MultipleLocator(0.25)
-yminorLocator = MultipleLocator(0.25)
+xminorLocator = MultipleLocator(500)
+yminorLocator = MultipleLocator(0.05)
 
 #ax.xaxis.set_major_locator(majorLocator)
 ax.xaxis.set_minor_locator(xminorLocator)
@@ -63,18 +63,18 @@ ax.tick_params()
 
 for i, ylabel in enumerate(labels[1:]):
     slope, intercept, r_value, p_value, std_err = linregress(data[0], data[1+i])
-    ylabel = "Tension selon contrainte"
+    ylabel = "Variation du volume"
     ax.errorbar(data[0], data[1+i], xerr=errors[0], yerr=errors[1+i], marker=".", linestyle="", markersize=8, label="%s ($R^2=%.5f$)" % (ylabel, 1*round(r_value, 5)))
     #Linear regression
-    ax.plot(data[0], np.multiply(slope, data[0])+intercept, label=("(%.2d $\pm$ %.2d)$\cdot$ $\epsilon$ + (%.1f $\pm$ %.1f)" % (round(slope/1000, 1)*1000, 110, round(intercept, 1), 0.1)))
+    ax.plot(data[0], np.multiply(slope, data[0])+intercept, label=("(%.5f $\pm$ %.5f)$\cdot$ $T$ + (%.2f $\pm$ %.2f)" % (slope, 0.00001, 0.02, 0.01)))
 
 ax.set_xlabel("{} [{}]".format(labels[0], units[0]), fontsize=12)
 ax.set_ylabel("{} [{}]".format(labels[1], units[1]), fontsize=12)
 
 # ===== MANUAL SETTINGS =========
-ax.set_ylabel("Tension au pont de Wheatstone [$V$]")
-ax.set_xlabel("$\epsilon$")
-plt.ticklabel_format(style='sci', axis='x', scilimits=(0,0))
+ax.set_ylabel("dV [$mm^3$]")
+ax.set_xlabel("Pression dand la bonbonne [kPa]")
+#plt.ticklabel_format(style='sci', axis='x', scilimits=(0,0))
 ax.legend(loc='best', fontsize=11)
 ax.grid(alpha=0.5, linestyle='--')
 fig.set_size_inches(6, 6)

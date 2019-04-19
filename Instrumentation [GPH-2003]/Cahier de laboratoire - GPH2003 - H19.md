@@ -1486,19 +1486,19 @@ Mesure de la déformation radiale du cylindre pressurisé. FJ = 2.1
 - - Faire la mise à zéro du pont (équilibre) à 500 kPa
 - Pression entre 500 kPa et 7000 kPa par incréments de 500 kPa. 
 
-| Pression [kPa $\pm$ 50] | Tension [mV $\pm$ 0.02] |
-| ----------------------- | ----------------------- |
-| 500                     | 0.04                    |
-| 1000                    | 0.10                    |
-| 1500                    | 0.16                    |
-| 2000                    | 0.22                    |
-| 2500                    | 0.29                    |
-| 3000                    | 0.34                    |
-| 3500                    | 0.39                    |
-| 4000                    | 0.43                    |
-| 4500                    | 0.48                    |
-| 5000                    | 0.53                    |
-| 5500                    | 0.56                    |
+| Pression [kPa $\pm$ 50] | dV [$mm^3$ $\pm$ 0.02] |
+| ----------------------- | ---------------------- |
+| 500                     | 0.02                   |
+| 1000                    | 0.06                   |
+| 1500                    | 0.10                   |
+| 2000                    | 0.14                   |
+| 2500                    | 0.18                   |
+| 3000                    | 0.21                   |
+| 3500                    | 0.24                   |
+| 4000                    | 0.27                   |
+| 4500                    | 0.30                   |
+| 5000                    | 0.33                   |
+| 5500                    | 0.35                   |
 
 À 6Mpa, jauge de sécurité s'est ouverte. Toute qu'un saut.
 
