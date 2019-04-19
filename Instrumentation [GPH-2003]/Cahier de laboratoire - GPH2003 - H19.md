@@ -1,4 +1,4 @@
-# Cahier de laboratoire - GPH2003 
+Cahier de laboratoire - GPH2003 
 
 [TOC]
 
@@ -1090,13 +1090,15 @@ Angle du capteur: 45$\pm​$5
 
 Débitmètre déphasage
 
+![1553804062994](assets/1553804062994.png)
+
 UN variac est branché au ventillateur. Celui-ci est connecté à un tube qui contient le capteur à angle avec un tube de pitot au bout pour déterminer la vitesse du fluide
 
 DImètre du tube: 8.0cm
 
 Longeur du tube pour capteur: 26.0cm
 
-| $\Delta P$$\pm​$ 4 | $\Delta \phi$ $\pm​$ 5                         |
+| $\Delta P$$\pm$ 4 | $\Delta \phi$ $\pm$ 5                         |
 | ----------------- | --------------------------------------------- |
 | 0                 | -95 $\pm$ 5                                   |
 | 10                | -71$\pm$2                                     |
@@ -1148,30 +1150,241 @@ P-P:308mV
 
 P-P: 7.12
 
-| $\Delta P$ $\pm $1 | $V_{fluide}$ | $\Delta t$$\pm $0.1 |
-| ------------------ | ------------ | ------------------- |
-| 0                  |              | 750.8               |
-| 6                  |              | 748.4               |
-| 9                  |              | 747.6               |
-| 14                 |              | 746.6               |
-| 24                 |              | 746.4               |
-| 29                 |              | 746.0               |
-| 43                 |              | 744.2               |
-| 50                 |              | 744.4               |
-| 56                 |              | 743.6               |
-| 62                 |              | 743.2               |
-| 64                 |              | 743.2               |
-|                    |              |                     |
+| $\Delta P$ $\pm $1 | $\Delta t$$\pm $0.1 |
+| ------------------ | ------------------- |
+| 0                  | 750.8               |
+| 6                  | 748.4               |
+| 9                  | 747.6               |
+| 14                 | 746.6               |
+| 24                 | 746.4               |
+| 29                 | 746.0               |
+| 43                 | 744.2               |
+| 50                 | 744.4               |
+| 56                 | 743.6               |
+| 62                 | 743.2               |
+| 64                 | 743.2               |
+|                    |                     |
 
-$$V=\sqrt{\frac{2(P_{tot}-P_{stat})}{\rho}}$$
+$$V=\sqrt{\frac{2(P_{tot}-P_{stat})}{\rho}}​$$
+
+| Vitesse de l'air [$m/s$] | Délais de propagation [$\mu s$ $\pm$ 0.1] |
+| ------------------------ | ----------------------------------------- |
+| 0.0 $\pm$ 1.8            | 750.8                                     |
+| 3.2 $\pm$ 1.8            | 748.4                                     |
+| 3.9 $\pm$ 1.5            | 747.6                                     |
+| 4.9 $\pm$ 1.2            | 746.6                                     |
+| 6.4 $\pm$ 0.9            | 746.4                                     |
+| 7.0$\pm$ 0.9             | 746.0                                     |
+| 8.5 $\pm$ 0.7            | 744.2                                     |
+| 9.2 $\pm$ 0.7            | 744.4                                     |
+| 9.7 $\pm$ 0.6            | 743.6                                     |
+| 10.2 $\pm$ 0.6           | 743.2                                     |
+| 10.4 $\pm$ 0.6           | 743.2                                     |
 
 À l'aide du tube de Pitot, on mesure la vitesse du fluide avec la formule ci-dessus.
 
 ## Capteur de Pression
 
+**Date : ** Conception le 28 Mars et laboratoire le 29 Mars 2019
+**Partenaires :** Étienne Ransford, Anais Parrot, Quentin Perry-Auger
+
+**Buts de l'expérience :**
+
+Le but de ce laboratoire est de se familiariser avec différents types de capteurs de pression, de les caractériser. Les capteurs de pression étudiés dans laboratoire sont :
+
+1. un capteur différentiel à réluctance variable ;
+2. deux capteurs non différentiels à pression élevée (jauge à déformation et réluctance variable) ;
+3. une jauge à vide (thermocouple).
+
 ### Préparation
 
+Principe de base : paroi se déforme sous pression et cette déformation est mesurée (jauge à déformation) par diverses méthodes. Les variations doivent être linéaire, donc les déformation doivent être faible afin de rester dans le régime linéaire.
+
+#### Jauge a déformation
+
+![1553797465956](assets/1553797465956.png)
+
+Diaphragme transmet sa déformation au levier. Résistances montées en pont de Wheatstone alors déséquilibre
+
+#### Capteurs à réluctance variable
+
+Pression rapproche diaphragme qui augmente inductance. Le diaphragme ferme la boucle de flux magnétique. plus le diaphragme est proche, plus le flux est important et plus l'inductance augmente. Possible d'utiliser face a face pour avoir déplacement du diaphragme proportionnel a P1-P2 (mode différentiel) en comparant L1 et L2. Possible d'utiliser ce setup en pont de Wheatstone en replancant deux des résistances avec les inductances.
+
+Différentiel (Limité a environ 10kPa) : 
+
+![1553797550229](assets/1553797550229.png)
+
+![1553797582826](assets/1553797582826.png)
+
+#### Capteur potentiomètre
+
+Avantages : peut outputs plusieurs volts et nécessite pas d'ampli. Toutefois, limité par la friction
+
 ### Séance
+
+#### Matériel
+
+— 2 montages pour la génération de pressions élevées ;
+— capteur de pression à jauge à déformation ;
+— microvoltmètre ;
+— capteur de pression à réluctance variable ;
+— pont pour le capteur à réluctance variable ;
+— capteur de pression différentiel à réluctance variable ;
+— pont pour le capteur différentiel ;
+— jauge à thermocouple ;
+— source de courant constant pour la jauge à thermocouple ;
+— source de tension (5 V, 10 V, 0–120 mA) ;
+— générateur de fonctions ;
+— oscilloscope ;
+— colonnes d’eau ;
+— moniteur de température ;
+— pompe à vide DuoSeal 1400 1 
+— câbles, fils et adaptateurs.
+
+#### Manipulations
+
+##### Capteur différentiel à reluctance variable
+
+Pour produire les pressions mesurables, des colonnes d'eau seront utilisées.
+
+Phase de 0 : augmentation de L1/ diminution de L2 et phase 180 = inverse
+
+Basse pression (ce qu'il faut pour Capteur différentiel à reluctance variable) : colonnes d'eau
+     on peut calculer P avec $P = \rho g h$.
+
+Manipulations de base proposée : signal alternatif AB en fonction de hauteur colonne d'eau
+
+**Étalonnage**
+
+1) enlever les bulles à l'aide de la méthode dans le protocole
+
+2) on branche la sortie a l'oscilloscope (puisque c'est AC et il faut considérer les phases)
+Ne pas oublier j'ajuster le pont de wheatstone et de l'alimenter avec 300khz 4V.
+Zero du pont : 0.0034 ± 0.0001
+4.00 ± 0.01 a 357.7 ±0.1 kHz 
+
+3) on rempli une colonne et on la vide, puis rempli la seconde colonne
+
+
+
+**Reluctance variable non-différentiel:**
+
+Faire varier la pression avec des variantions constantes. Ajouter du poids sur les plaques et mesurer la variation de la tension. Balancer le pont de Wheatstone à 0  pour une pression de 0. La pression variante va faire varier la tension. On mesurera cette relation.
+
+Des poids sont ajoutés
+
+Premièrement,  les appareils ont été branchés. 
+
+Le signal generator a été ajusté afin d'avoir un signal d'excitation de 3.68V $\pm$ 0.1V
+
+le pont de Wheatstone a été ajusté afin d'avoir le signal le plus petit à la sortie (pont de Wheatstone ajusté) 
+
+4.5Kg ont été ajoutés
+
+![1553884036670](assets/1553884036670.png)
+
+| Pression $\pm$ 5 | Tension au pont [mV $\pm$ 5] |
+| ---------------- | ---------------------------- |
+| 0                | 28 $\pm$ 5                   |
+| 50               | 30 $\pm$ 5                   |
+| 100              | 32                           |
+| 150              | 38                           |
+| 200              | 50                           |
+| 250              | 58                           |
+| 300              | 70                           |
+| 350              | 78                           |
+| 400              | 88                           |
+| 450              | 98                           |
+| 500              | 106                          |
+| 550              | 114                          |
+| 600              | 124                          |
+| 650              | 136                          |
+| 700              | 144                          |
+| 750              | 152                          |
+|                  |                              |
+
+
+
+**Colonne d'eau**
+
+Le même principe est utilisé pour le capteur à différentiel. On mesure la différence de pression en les deux colonnes d'eau.  Il s'agit du même pont de wheatstone
+
+![1553883755148](assets/1553883755148.png)
+
+PP 4V
+
+Température de la pièce: 242
+
+ON commence à 90cm de hauteur pour les deux colonnes. On enlève progressivement de l'eau dans une colonne afin de générer une différence de pression aux bornes du capteur
+
+| DIfférence du hauteur des colonnes d'eau [mm $\pm$ 1] | Tension au capteur [mV $\pm$ 5] |
+| ----------------------------------------------------- | ------------------------------- |
+| 0                                                     | 12 $\pm$ 2                      |
+| 50                                                    | 14 $\pm$ 2                      |
+| 100                                                   | 19 $\pm$ 2                      |
+| 150                                                   | 25 $\pm$ 2                      |
+| 200                                                   | 30 $\pm$ 2                      |
+| 250                                                   | 37 $\pm$  2                     |
+| 300                                                   | 43 $\pm$ 2                      |
+| 350                                                   | 49 $\pm$ 2                      |
+| 400                                                   | 55                              |
+| 450                                                   | 61                              |
+
+On peut calculer la pression avec $\rho g h$
+
+Les spécifications du capteurs sont sur les photos prises:
+
+
+
+**Jauge déformation non-différentiel**
+
+![1553883956491](assets/1553883956491.png)![1553883958197](assets/1553883958197.pngLe montage est particulièrement similaire au montage pour la reluctance. 
+
+| Pression $\pm$ 10 | Tension au pont de Wheatstone [mV] $\pm 0.05$ |
+| ----------------- | --------------------------------------------- |
+| 0                 | 0.611 $\pm$ 0.001                             |
+| 100               | 2.410 $\pm 0.05$                              |
+| 150               | 3.856                                         |
+| 200               | 5.643                                         |
+| 250               | 6.956                                         |
+| 300               | 8.700                                         |
+| 350               | 9.850                                         |
+| 400               | 11.493                                        |
+| 450               | 13.000                                        |
+| 500               | 14.317                                        |
+| 550               | 15.870                                        |
+| 600               | 17.499                                        |
+| 700               | 20.425                                        |
+| 800               | 23.50                                         |
+
+
+
+**Thermocouple**
+
+On allume l'alimentation qui alimente le thermocouple et on note la température tout en faisant varier la pression dans le tube en fonction de la pression.
+
+| pression [mmHg] | Température [°C] $\pm$ 0.5 |
+| --------------- | -------------------------- |
+| 50              | 340.2                      |
+| 10              | 321.2                      |
+| 150             | 303.1                      |
+| 200             | 286.3                      |
+| 250             | 274                        |
+| 300             | 264.5                      |
+| 350             | 258.0                      |
+| 400             | 251.8                      |
+| 450             | 246.8                      |
+| 500             | 241.6                      |
+| 550             | 237.2                      |
+| 600             | 232.6                      |
+| 650             | 227.7                      |
+| 700             | 225.5                      |
+
+$PV=nRT$
+
+modification du $k$ coefficient de conduction (Vérifier si 'K' est dépendant)
+
+
 
 
 
@@ -1180,3 +1393,4 @@ $$V=\sqrt{\frac{2(P_{tot}-P_{stat})}{\rho}}$$
 ### Préparation
 
 ### Séance
+

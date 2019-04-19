@@ -7,7 +7,7 @@ from matplotlib.ticker import (MultipleLocator, FormatStrFormatter,AutoMinorLoca
 
 zeroXFactor = 0
 
-filename = "dephasage.txt"
+filename = "temps.txt"
 
 with open(filename, "r") as file:
     lines = file.readlines()
@@ -49,36 +49,35 @@ fig = plt.figure()
 ax = fig.add_subplot(111)
 
 # ========= TICKS SETTINGS ===========
-majorLocator = MultipleLocator(10)
+majorLocator = MultipleLocator(2)
 majorFormatter = FormatStrFormatter('%d')
 xminorLocator = MultipleLocator(0.25)
-yminorLocator = MultipleLocator(2.5)
+yminorLocator = MultipleLocator(0.25)
 
 #ax.xaxis.set_major_locator(majorLocator)
 ax.xaxis.set_minor_locator(xminorLocator)
 ax.yaxis.set_minor_locator(yminorLocator)
+ax.set_xlim(-1, 11)
 ax.tick_params()
 # ====================================
 
 for i, ylabel in enumerate(labels[1:]):
     slope, intercept, r_value, p_value, std_err = linregress(data[0], data[1+i])
     ylabel = "Fréquence de la sortie"
-    ax.errorbar(data[0], data[1+i], xerr=errors[0], yerr=errors[1+i], marker=".", linestyle="", markersize=8, label="{}".format(ylabel))
+    ax.errorbar(data[0], data[1+i], xerr=errors[0], yerr=errors[1+i], marker=".", linestyle="", markersize=8, label="%s ($R^2=%.5f$)" % (ylabel, -1*round(r_value, 5)))
     #Linear regression
-    ax.plot(data[0], np.multiply(slope, data[0])+intercept, label=("%.3f $\cdot$ $V_s$ + %.3f($R^2=%.5f$)" % (slope, intercept, round(r_value, 5))))
+    ax.plot(data[0], np.multiply(slope, data[0])+intercept, label=("(%.1f $\pm$ %.1f)$\cdot$ $V_s$ + (%.1f $\pm$ %.1f)" % (round(slope, 1), 0.2, round(intercept, 1), 0.1)))
 
 ax.set_xlabel("{} [{}]".format(labels[0], units[0]), fontsize=12)
 ax.set_ylabel("{} [{}]".format(labels[1], units[1]), fontsize=12)
 
 # ===== MANUAL SETTINGS =========
-ax.set_ylabel("Déphasage entre l'entrée et la sortie [$\Delta \phi$]")
+ax.set_ylabel("Temps de propagation [$\mu s$]")
 ax.set_xlabel("Vitesse de l'air [$m/s$]")
 
-ax.legend(loc=2, fontsize=11)
+ax.legend(loc='best', fontsize=11)
 ax.grid(alpha=0.5, linestyle='--')
-
-
-
-fig.show()
-fig.savefig('md_mux', dpi=600)
+fig.set_size_inches(6, 6)
+plt.show()
+fig.savefig('temps.png', dpi=600)
 
