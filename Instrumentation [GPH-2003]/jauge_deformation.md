@@ -1,25 +1,21 @@
 
 
-| **Marc-André Vigneault**                           |        Date de préparation: 4 Avril 2019 |
-| -------------------------------------------------- | ---------------------------------------: |
-| **Coéquipiers:** Anais parrot, Quantin perry-auger | **Date d'expérimentation: 5 Avril 2019** |
-
 ## Jauge à déformation
+
+| **Marc-André Vigneault**                           | Date de préparation: 4 Avril 2019        |
+| -------------------------------------------------- | ---------------------------------------- |
+| **Coéquipiers:** Anais parrot, Quantin perry-auger | **Date d'expérimentation: 5 Avril 2019** |
 
 [1] Protocole de laboratoire [disponible ici](https://sitescours.monportail.ulaval.ca/contenu/sitescours/036/03613/201901/site103274/accueil/bloctexte545794/ressourcestexte/NotesDeCours%20GPH-2003.pdf?identifiant=1d53dc8887cf78038c83287e866aaea46c688607) [p.51].
 
 ### But
 
 *Le but de ce laboratoire est d’observer le fonctionnement des jauges à déformation et des circuits
-associés, ainsi que de comparer la performance des différents circuits et montages possibles. [1]*
-
-##### Liste du matériel en référence [1]
-
- 
+de mesures, ainsi que de comparer la performance des différents capteurs. [1]*
 
 ### Préparation
 
-![Schéma du potentiomètre rotatif](figs/jauge.PNG)
+![1555679419633](assets/1555679419633.png)
 
 ​					**Figure 1:** Schéma de la jauge à déformation
 
@@ -33,39 +29,35 @@ La jauge à déformation fonctionne par l'intermédiaire d'un matériau conducti
 
 - Donc faibles variations de résistance demande un pont de Wheatstone. Ceci permet de mesurer la déformation par une différence de tension. 
 
-![Schéma du potentiomètre rotatif](figs/pont.PNg)
+![1555679434202](assets/1555679434202.png)
 
 ​		**Figure 2:** Schéma du pont de Wheatstone utilisé pour la jauge à déformation.
 
 - Différence de potentiel calculée ainsi:
 
-![1553797558313](figs/eq1.PNG)
+![1555679590520](assets/1555679590520.png)
 
 - Il faut au moins une résistance variable afin d'équilibrer le pont. Ou plus simplement de suivre la méthode avec pont avec zéro ajustable par l'intermédiaire d'une résistance variable: 
 
-![ff](figs/pont_zero.PNG)
+![1555679624622](assets/1555679624622.png)
 
 ​		**Figure 3:** Schéma du pont de Wheatstone à zéro ajustable utilisé pour la jauge à déformation.
 
-
 **_2. Calcul de la déformation_**
 
-- Afin de calculer la valeur d'élongation d'un matériau, il est important de définir le *Facteur de jauge*.
-
-- Cela mène à un déformation de
-
-- Le facteur de Jauge peut aussi etre calculer à l'aide du ciefficient de Poission qui détermine le ratio de déformation entre les différents axes d'un matériau.
-
+- Le facteur de Jauge  est calculé à l'aide du coefficient de Poisson qui détermine le ratio de déformation entre les différents axes d'un matériau ou encore par
+- ![1555679750149](assets/1555679750149.png)
 - Le coefficient de Poisson vaut environ 0.3 pour la plupart des matériaux. On obtient donc
   F.J. = 1.6 . 
-- $\rho$ change toutefois un peu pour certain métaux lorsqu'il se déforme. On observe alors plutôt des valeurs de FJ = 2 pour des jauges métalliques. 
+- $\rho$ change lorsque la jauge se déforme. On observe FJ = 2 pour des jauges métalliques. 
+- ![1555679794544](assets/1555679794544.png)
 
 
 
 **_3. Sources d'erreur_**
 
-- La plus grande source d'erreur est la température.
-- Afin de minimiser les erreurs il est possible de remplacer R2 par une autre jauge qui est dite passive et permet de contrer les effets thermiques et garde le pont balancé.
+- La plus grande source d'erreur est la température à cause de dilatation thermique des matériaux qui vient déformer la jauge.
+- On peut mettre une jauge sans contrainte (seulement effet de la température) dans le pont de Wheatstone afin de balancer les variations de température.
 
  
 
@@ -81,10 +73,10 @@ La jauge à déformation fonctionne par l'intermédiaire d'un matériau conducti
 
 ##### Montage obtenu
 
+![1555679937764](assets/1555679937764.png)
 
-​				**Figure 5: ** Montage
 
-![1554411447271](assets/1554411447271.png)
+​									**Figure 5: ** Montage
 
 
 
@@ -121,7 +113,7 @@ Mesure de la déformation radiale du cylindre pressurisé. FJ = 2.1
 | 5000                    | 0.53                    |
 | 5500                    | 0.56                    |
 
-> Valve de sécurité à 6 MPa. 
+À 6Mpa, jauge de sécurité s'est ouverte. Toute qu'un saut.
 
  
 
@@ -136,7 +128,6 @@ Mesure de la déformation linéaire pour un barre en tension
 - Épaisseur = 4.26 $\pm$ 0.05
 - Ajuster le pont de Wheatstone afin d'avoir une sortie de 0V $\pm$ 0.00002V
 - **Premier test avec la jauge du haut seulement**. Mesure de tension de sortie du pont en fonction de la hauteur au support.
-- On effectuera 5 tours de cadran (Avec une mesure par demi cadran)
 - Incréments de 0.5 mm sur une plage de 0 mm à 8 mm.
 
 | Hauteur au support [mm $\pm$ 0.01] | Tension [mV]$\pm$0.01 |
@@ -217,3 +208,11 @@ Résistance jauge supérieure: 122.8
 Résistance jauge bas: 120.8
 
 Petite résistance 120.6
+
+
+
+**note sur les déformations**
+
+![1555680879152](assets/1555680879152.png)
+
+![1555680888591](assets/1555680888591.png)
