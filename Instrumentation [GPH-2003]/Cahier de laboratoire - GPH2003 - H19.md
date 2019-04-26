@@ -110,7 +110,7 @@ Colonne 5 = Fourier
 
 > **Si l'analyse est effectuée:**
 >
-> 
+> Une reconstruction du signal de base de 100Hz sera tenté pour les différentes fréquences d'acquisition. Le théorème de Nyquist sera vérifié à travers l'analyse des résultats.  Selon la théorie, la fréquence minimale afin de reconstruire le signal devrait être de de 200Hz. Idéalement, 1kHz serait la fréquence à privilégier.
 
 
 
@@ -320,6 +320,8 @@ même chose fréquence de coupure =30kHz
 ***date***: 8 février 2019
 ***coéquipiers***: Anais Parrot & Myryk Gaudreault
 
+***But:*** Comparer deux types de capteurs de position linéaire, le potentiomètre et le LVDT.
+
 ### Préparation
 
 Types de capteurs de position:
@@ -425,36 +427,39 @@ On utilisera des bons de 0.500mm
 
 côté positif
 
-| Hauteur [mm $\pm$0.005] | Angle tige [° $\pm$ 0] | V3-V2 [mV $\pm$ 10 ] |
-| ----------------------- | ---------------------- | -------------------- |
-| 14.425                  |                        | 40                   |
-| 15.000                  |                        | 70                   |
-| 15.500                  |                        | 120                  |
-| 16.000                  |                        | 170                  |
-| 16.500                  |                        | 250                  |
-| 17.000                  |                        | 300                  |
-| 17.500                  |                        | 370                  |
-| 18.000                  |                        | 430                  |
-| 18.200                  |                        | 460                  |
+| Hauteur [mm $\pm$0.005] | V3-V2 [mV $\pm$ 10 ] |
+| ----------------------- | -------------------- |
+| 14.425                  | 40                   |
+| 15.000                  | 70                   |
+| 15.500                  | 120                  |
+| 16.000                  | 170                  |
+| 16.500                  | 250                  |
+| 17.000                  | 300                  |
+| 17.500                  | 370                  |
+| 18.000                  | 430                  |
+| 18.200                  | 460                  |
 
 côté négatif
 
-| Hauteur [mm 0.005] | Angle tige [°  0] | V3-V2 [mV  10 ] |
-| ------------------ | ----------------- | --------------- |
-| 14.000             |                   | 40              |
-| 13.500             |                   | 70              |
-| 13.000             |                   | 120             |
-| 12.500             |                   | 170             |
-| 12.000             |                   | 250             |
-| 11.500             |                   | 300             |
-| 11.000             |                   | 370             |
-| 10.500             |                   | 430             |
-| 10.000             |                   | 460             |
+| Hauteur [mm 0.005] | V3-V2 [mV  10 ] |
+| ------------------ | --------------- |
+| 14.000             | 40              |
+| 13.500             | 70              |
+| 13.000             | 120             |
+| 12.500             | 170             |
+| 12.000             | 250             |
+| 11.500             | 300             |
+| 11.000             | 370             |
+| 10.500             | 430             |
+| 10.000             | 460             |
 
 ## Conditionnement
 
 ***date***: 15 février 2019
 ***coéquipiers***: Anais Parrot & Ludovick Bégin & Hubert Audet
+
+***But:*** Le but de ce laboratoire est de se familiariser avec les différentes options afin de transmettre un
+signal sur une longue distance.
 
 ### Préparation
 
@@ -483,7 +488,7 @@ Vérifier la variation de courant en fonction de la tension (15 valeurs) et mont
 
 *Tension source signal: 0-5V*
 
-*Tension alimentation: 25$\pm$*
+*Tension alimentation: 25.0$\pm$0*.1
 
 | Tension signal [V $\pm$ 0.05] | Courant [mA $\pm$ 0.05] |
 | ----------------------------- | ----------------------- |
@@ -644,18 +649,16 @@ Test de la bande passante du modulateur
 | 2 (15kHz)   | 3.14                              | DC                                | 2.94                            | DC                                 |
 | 3 (22.5kHz) | 3.99                              | DC                                | 4.09                            | DC                                 |
 
-La linéarité a été observée pour tous les appareils. Le convertisseur de tension-courant permet une transmission de données linéaire. Le multiplexeur permet l'envoi de plusieurs signaux et leur démultiplexage. avec un gain environ unitaire. ON a pu ob
+La linéarité a été observée pour tous les appareils. Le convertisseur de tension-courant permet une transmission de données linéaire. Le multiplexeur permet l'envoi de plusieurs signaux et leur démultiplexage. avec un gain environ unitaire. 
 
 ## Amplification d'instrumentation
 
 ***date***: 22 février 2019
 ***coéquipiers***: Ludovick Bégin
 
-[1] Protocole de laboratoire [disponible ici](https://sitescours.monportail.ulaval.ca/contenu/sitescours/036/03613/201901/site103274/accueil/bloctexte545794/ressourcestexte/NotesDeCours%20GPH-2003.pdf?identifiant=1d53dc8887cf78038c83287e866aaea46c688607) [p.17].
+***But:***Le but de ce laboratoire est, d’une part, d’étudier le fonctionnement d’un amplificateur d’instrumentation et, d’autre part, d’en concevoir et construire un modèle qui respecte une liste de critères* *préétablis[1].*
 
-### But
-
-*Le but de ce laboratoire est, d’une part, d’étudier le fonctionnement d’un amplificateur d’instrumentation et, d’autre part, d’en concevoir et construire un modèle qui respecte une liste de critères* *préétablis[1].*
+[1]  [Protocole](https://sitescours.monportail.ulaval.ca/contenu/sitescours/036/03613/201901/site103274/accueil/bloctexte545794/ressourcestexte/NotesDeCours%20GPH-2003.pdf?identifiant=1d53dc8887cf78038c83287e866aaea46c688607) [p.17].
 
 ### Préparation
 
@@ -699,42 +702,42 @@ L'ampli utilisé est le UA741. Le PINOUT est illustré ci-contre:
 
 On mesure Vout en fonction de Vmoy (V1 + V2)/2 en changeant Vmoy sans modifier deltaV. On effectuera une prise de mesures par incréments de 0.5 V sur la plage d'intérêt.
 
-| [V  0.01] | [V  0.001] |
-| --------- | ---------- |
-| 0.50      | 1.003      |
-| 1.00      | 1.005      |
-| 1.50      | 1.007      |
-| 2.00      | 1.009      |
-| 2.50      | 1.012      |
-| 3.00      | 1.015      |
-| 3.50      | 1.017      |
-| 4.00      | 1.019      |
-| 4.50      | 1.020      |
-| 5.00      | 1.021      |
-| 5.50      | 1.024      |
+| Vmoy [V  $\pm$ 0.01] | Vout [V  $\pm$ 0.001] |
+| -------------------- | --------------------- |
+| 0.50                 | 1.003                 |
+| 1.00                 | 1.005                 |
+| 1.50                 | 1.007                 |
+| 2.00                 | 1.009                 |
+| 2.50                 | 1.012                 |
+| 3.00                 | 1.015                 |
+| 3.50                 | 1.017                 |
+| 4.00                 | 1.019                 |
+| 4.50                 | 1.020                 |
+| 5.00                 | 1.021                 |
+| 5.50                 | 1.024                 |
 
-- Gain en mode commun mesuré (pente du graphique) = 
+- Gain en mode commun mesuré (pente du graphique) = 0.04
 
-**INSÉRER GRAPHIQUE ICI**
+![1556256803425](assets/1556256803425.png)
 
 
 
 On mesure maintenant Vout en fonction de deltaV. On change deltaV en gardant Vmoy constant. On effectuera des Incréments de 1V sur la plage d'intérêt. On garde une moyenne de 7.5V.
 
-| [mV  0.01] | [V  0.001] |
-| ---------- | ---------- |
-| 0          | 0.017      |
-| 1          | 1.017      |
-| 2          | 2.02  0.01 |
-| 3          | 3.02  0.01 |
-| 4          | 4.02  0.01 |
-| 5          | 5.02  0.01 |
-| 6          | 6.03  0.01 |
-| 7*         | 7.03  0.01 |
+| [mV $\pm$  0.01] | [V  $\pm$ 0.001] |
+| ---------------- | ---------------- |
+| 0.00             | 0.017            |
+| 1.00             | 1.017            |
+| 2.00             | 2.02  $\pm$0.01  |
+| 3.00             | 3.02$\pm$  0.01  |
+| 4.00             | 4.02 $\pm$ 0.01  |
+| 5.00             | 5.02 $\pm$ 0.01  |
+| 6.00             | 6.03 $\pm$ 0.01  |
+| 7.00             | 7.03  $\pm$0.01  |
 
-- Gain différentiel mesuré (pente) = 
+- Gain différentiel mesuré (pente) = 100
 
-
+![1556256952440](assets/1556256952440.png)
 
 ##### Analyse de l'amplificateur d'instrumentation
 
@@ -745,42 +748,42 @@ On mesure Vout en fonction de Vmoy (V1 + V2)/2 en changeant Vmoy sans modifier d
 
 La source de la tensions a été augmentée à -14V +15V afin de permetre au gain de 3 de sortir une tension sans être limité par la source sur une plus grande plage. 
 
-| [mV  0.01] | [V  0.01] |
-| ---------- | --------- |
-| 0.50       | 3.02      |
-| 1.00       | 3.02      |
-| 1.50       | 3.02      |
-| 2.00       | 3.02      |
-| 2.50       | 3.02      |
-| 3.00       | 3.02      |
-| 3.50       | 3.02      |
-| 4.00       | 3.02      |
-| 4.50       | 3.02      |
-| 5.00       | 3.02      |
+| [mV  $\pm$ 0.01] | [V $\pm$ 0.01] |
+| ---------------- | -------------- |
+| 0.50             | 3.02           |
+| 1.00             | 3.02           |
+| 1.50             | 3.02           |
+| 2.00             | 3.02           |
+| 2.50             | 3.02           |
+| 3.00             | 3.02           |
+| 3.50             | 3.02           |
+| 4.00             | 3.02           |
+| 4.50             | 3.02           |
+| 5.00             | 3.02           |
 
-- Gain en mode commun mesuré (pente du graphique) = 
+- Gain en mode commun mesuré (pente du graphique) = 0
 
-  
+  ![1556257135893](assets/1556257135893.png)
 
 On mesure maintenant Vout en fonction de deltaV. On change deltaV en gardant Vmoy constant
 
 - Incréments de 1V sur la plage d'intérêt. On garde une moyenne de 7.5V.
 
-  | [mV  0.01] | [V  0.001]  |
-  | ---------- | ----------- |
-  | 0.00       | 0.022       |
-  | 0.50       | 1.523       |
-  | 1.00       | 3.03  0.01  |
-  | 1.50       | 4.53  0.01  |
-  | 2.00       | 6.03  0.01  |
-  | 2.50       | 7.54  0.01  |
-  | 3.00       | 9.05  0.01  |
-  | 3.50       | 10.54  0.01 |
-  | 4.00       | 12.05  0.01 |
+  | [V $\pm$ 0.01] | [V $\pm$ 0.001]  |
+  | -------------- | ---------------- |
+  | 0.00           | 0.022            |
+  | 0.50           | 1.523            |
+  | 1.00           | 3.03  $\pm$0.01  |
+  | 1.50           | 4.53$\pm$  0.01  |
+  | 2.00           | 6.03 $\pm$ 0.01  |
+  | 2.50           | 7.54  $\pm$0.01  |
+  | 3.00           | 9.05 $\pm$ 0.01  |
+  | 3.50           | 10.54 $\pm$ 0.01 |
+  | 4.00           | 12.05$\pm$  0.01 |
 
-- Gain différentiel mesuré (pente) = 
+- Gain différentiel mesuré (pente) = 3
 
-
+Problème de graphique, le format d'une lettre ne fonctionne pas.
 
 - En ajoutant une asymétrie à l’endroit approprié, quantifiez l’effet d’une disparité entre
   deux résistances (pour les couples R1, R2 et R3). Quels sont les effets sur Gd et Gmc ?
@@ -870,6 +873,9 @@ On mesure maintenant Vout en fonction de deltaV. On change deltaV en gardant Vmo
 ***date***: 1 mars 2019
 ***coéquipiers***: Anais Parrot - Étienne Ransford - Quentin Auget
 
+***But:***L’expérience est destinée à illustrer et à comparer l’étalonnage et la réponse dynamique 2 de différents
+capteurs de température
+
 ### Préparation
 
 Types de capteurs étudiés
@@ -891,8 +897,8 @@ Types de capteurs étudiés
   - Sensibilité faible (0.04mV/degré)
   - pas totalement linéaire, le coefficient alpha dépend de la température
   - Les connections forment un thermocouple suppoémentaire qui peut etre annulé en connaissant V généré par le thermicouple cuivre-cuivre.
-- éTALONNAGE DES CAPTEURS.
-  - Les températures facilement reproductibles en laboratoire pour l'étallonnage des capteurs sont les suivantes:![1551385842613](assets/1551385842613.png)
+- Étalonnage
+  - Les températures facilement reproductibles en laboratoire pour étalonnage des capteurs sont les suivantes:![1551385842613](assets/1551385842613.png)
 
 - Thermomètre à radiation
   - $$P=\epsilon \sigma T^4$$
@@ -926,7 +932,7 @@ L'étalonnage des 5 capteurs suivants sera fait simultanément dans un bassin de
 
 
 
-​				**Tableau 1: Mesure de la dérive de tension du thermocouple**
+​				**Tableau 1: Mesure de la dérive de tension du thermocouple** (mesure a été omise)
 
 | Température Ref [°C $\pm$0.01] | Tension mesurée [V $\pm$ 0.001] |
 | ------------------------------ | ------------------------------- |
@@ -944,7 +950,7 @@ L'étalonnage des 5 capteurs suivants sera fait simultanément dans un bassin de
 
 - La température pour les thermocouples a été prise dans l'eau bouillante pour des températures  de Tamb à T=100°C
 
-​				**Tableau 2: Mesure de la dérive de tension du thermocouple gainé**
+​				**Tableau 2: Mesure de la dérive de tension du thermocouple gainé** (mesure a été omise)
 
 | Température Ref [°C 0.01] | Tension mesurée [V  0.001] |
 | ------------------------- | -------------------------- |
@@ -1025,7 +1031,7 @@ Non gainé 11s
 
 gainé 20s
 
-## Capteur de Position Angulaire
+## Capteur de Position Angulaire (Semaine annulée)
 
 ### Préparation
 
@@ -1034,6 +1040,13 @@ gainé 20s
 
 
 ## Débitmètre
+
+***date***: 8 mars 2019
+***coéquipiers***: Anais Parrot - Étienne Ransford - Quentin Auget
+
+***But:***Le but de ce laboratoire est de caractériser deux débimètres, soit un débitmètre à temps de transit
+et un débitmètre à déphasage, puis de comparer leurs performances afin de déterminer les avantages
+et inconvénients de chacun
 
 ### Préparation
 
@@ -1176,6 +1189,10 @@ $$V=\sqrt{\frac{2(P_{tot}-P_{stat})}{\rho}}$$
 | 10.4 $\pm$ 0.6           | 743.2                                     |
 
 À l'aide du tube de Pitot, on mesure la vitesse du fluide avec la formule ci-dessus.
+
+
+
+
 
 ## Capteur de Pression
 
@@ -1385,16 +1402,19 @@ modification du $k$ coefficient de conduction (Vérifier si 'K' est dépendant)
 Jauge à déformation
 ---
 
-| **Marc-André Vigneault**                           | Date de préparation: 4 Avril 2019        |
-| -------------------------------------------------- | ---------------------------------------- |
-| **Coéquipiers:** Anais parrot, Quantin perry-auger | **Date d'expérimentation: 5 Avril 2019** |
+***date***: 5 Avril 2019
+***coéquipiers***: Anais Parrot - Étienne Ransford - Quentin Auget
+
+***But:***Le but de ce laboratoire est d’observer le fonctionnement des jauges à déformation et des circuits
+associés, ainsi que de comparer la performance des différents circuits et montages possibles. Plus
+spécifiquement, et sans s’y limiter, les objectifs sont :
+1. Déduire la déformation d’une poutre en fonction du signal d’une jauge.
+2. Déduire la déformation d’une poutre en utilisant deux jauges
+3. Quantifier les effets de variation de température avec un pont non compensé (une seule jauge).
+4. Quantifier les effets de variation de température avec un pont compensé (deux jauges).
+5. Appliquer les notions vues pour mesurer l’augmentation de volume que subit une petite bonbonne de gaz lors de sa mise sous pression.
 
 [1] [Protocole de laboratoire](https://sitescours.monportail.ulaval.ca/contenu/sitescours/036/03613/201901/site103274/accueil/bloctexte545794/ressourcestexte/NotesDeCours%20GPH-2003.pdf?identifiant=1d53dc8887cf78038c83287e866aaea46c688607) [p.51].
-
-### But
-
-*Le but de ce laboratoire est d’observer le fonctionnement des jauges à déformation et des circuits
-de mesures, ainsi que de comparer la performance des différents capteurs. [1]*
 
 ### Préparation
 
