@@ -8,6 +8,7 @@ Cahier de laboratoire - GPH2003
 
 ***date***: 25 janvier 2019
 ***coéquipiers***: Anais Parrot & Myryk Gaudreault
+***But:*** Reconstruire un signal périodique avec l'acquisition de LABVIEW et comprendre les implications du théorème de Nyquist-Shannon.
 
 ### Préparation
 
@@ -42,6 +43,12 @@ Cahier de laboratoire - GPH2003
 
 ### Séance
 
+Schéma fonctionnel du montage:
+
+![1556252424821](assets/1556252424821.png)
+
+
+
 Le labVIEW est débuté. Familiarisation grossière avec LabVIEW:
 
 - Clic droit dans le diagramme permet de choisir différentes fonctions afin de faire notre instrument virtuel. 
@@ -52,7 +59,7 @@ La création du VI a été faite selon le protocole:
 
 ![VI_param](assets/VI_param.PNG)
 
-Un échantillonnage sans entrée a été effectué afin d'observer les variations d'incrémentation du signal du bruit. On voit que les valeurs oscillent à coups de *0.002467+0.000087=.* Cette incrémentation  montre effectivement la résolution pour un VI programmé sur une plage de -5 à 5V. Ainsi, sachant que la carte est programmée sur 12 bits, on pourrait trouver la résolution numérique du signal mesuré en faisant $\frac{10}{4096}=0.00244​$ V
+Un échantillonnage sans entrée a été effectué afin d'observer les variations d'incrémentation du signal du bruit. On voit que les valeurs oscillent à coups de *0.002467+0.000087=.* Cette incrémentation  montre effectivement la résolution pour un VI programmé sur une plage de -5 à 5V. Ainsi, sachant que la carte est programmée sur 12 bits, on pourrait trouver la résolution numérique du signal mesuré en faisant $\frac{10}{4096}=0.00244$ V
 
 
 
@@ -99,6 +106,12 @@ Colonne 5 = Fourier
 | LOGICIEL PLANTE       | 5              |
 | LOGICIEL PLANTE       | 2              |
 
+ 
+
+> **Si l'analyse est effectuée:**
+>
+> 
+
 
 
 ## Capteur de Courant
@@ -142,17 +155,17 @@ Colonne 5 = Fourier
 
 0.05V = 0.14A
 
-La résistance $R_{shunt}​$ est beaucoup trop faible pour être mesurée, la résistance des fils est prédominante. Ainsi, on se fie à la datasheet qui dit:
+La résistance $R_{shunt}$ est beaucoup trop faible pour être mesurée, la résistance des fils est prédominante. Ainsi, on se fie à la datasheet qui dit:
 
-$R_{shunt}=(0.01000\pm0.00003)\Omega​$ 
+$R_{shunt}=(0.01000\pm0.00003)\Omega$ 
 
 cette mesure est vérifiée grossièrement en passant un courant dans la résistance, tel qu'il y a une différence de potentiel au borne de la résistance de 10mV. Le courant traversant est alors de 0.1A, ce qui est équivalent à 0.01 Ohms. Cependant, l'incertitude sur la datasheet est plus précise que celle de l'instrumentation utilisée, elle sera donc utilisée.
 
 La résistance totale du circuit est mesurée à l'aide d'un multimètre numérique **Agilent - 34461A**
 
-$R_{circuit}=(2.3\pm0.5)\Omega​$, $P_{max}=(5\pm )W​$
+$R_{circuit}=(2.3\pm0.5)\Omega$, $P_{max}=(5\pm )W$
 
-MAX ampérage circuit = 1.5A, donc on se limite à 1A juste par sécurité. ($P = RI^2\rightarrow \sqrt{\frac{P}{R}}=\sqrt{\frac{5}{2.3}}=1.47A​$)
+MAX ampérage circuit = 1.5A, donc on se limite à 1A juste par sécurité. ($P = RI^2\rightarrow \sqrt{\frac{P}{R}}=\sqrt{\frac{5}{2.3}}=1.47A$)
 
 La limitation de la source [**Agilent - U8031A** ]:https://www.keysight.com/en/pd-2054544-pn-U8031A/triple-output-dc-power-supply-30v-6a-2x-375w?nid=-35489.995979.00&cc=CA&lc=eng
 
@@ -160,7 +173,7 @@ est mise à 1A, alors que la tension sera variée jusqu'à l'atteinte de la limi
 
 Les branchement initiaux n'étaient pas bon, le courant était envoyé par les branchement où l'on devait prendre la tension aux bornes de RSHUNT et la tension mesurée était aux bornes des fils, donc la résistance était beaucoup trop importante, ainsi que le voltage drop. Le montage a été recommencé et la prise de donnée également.
 
-Il est possible de retrouver le courant du circuit en effectuant le calcul $\Delta V_{shunt}/R_{shunt} = I​$
+Il est possible de retrouver le courant du circuit en effectuant le calcul $\Delta V_{shunt}/R_{shunt} = I$
 
 | Tension source [V$\pm$0.02] | Courant calculé dans $R_{shunt}$ [mA$\pm​$0.3] | Courant Calculé avec $R_{total}$[A$\pm​$0] | Courant sur la source [A$\pm$0.02] |
 | --------------------------- | --------------------------------------------- | ----------------------------------------- | ---------------------------------- |
@@ -231,7 +244,7 @@ Des bons de 0.2V ont étés fait, car les bons de 0.1 prenaient trop de temps.
 | 2.40                        | 6.4094                        | 0.0433                                | 840                          |
 | 2.60                        | 6.4063                        | 0.0464                                | 910                          |
 
-Mesures pour la
+Mesures pour le décalage de la tension Hall selon le courant d'alimentation du capteur.
 
 | Courant source [mA $\pm$ 20] | Tension de Hall décalée [mV] |
 | ---------------------------- | ---------------------------- |
@@ -253,21 +266,13 @@ Mesures pour la
 
 Cependant, les incertitudes sur les mesures de linéarité ne sont pas importantes. On s'intéresse seulement à la relation et non pas au offset. Si l'appareil a une incertitude absolue sur sa mesure, elle sera caractérisée sur l'offset mesuré au départ. La courbe aura donc un offset avec une incertitude de 0.008, mais la linéarité de la relation ne sera pas affectée par cette erreur, mais par l'erreur aléatoire de l'appareil qui peut être négligé, selon la fiche des spécifications du Agilent 34461A.
 
-
-
-des grandes variations avaient étés observée à cause des vibrations sur la table. Celles-ci jouaient probablement sur les contacts des connections, augmentant ainsi la résistance du circuit. Cela a essayé d'être minimisé. Les mesures ont été refaites avec une attention particulière pour les vibrations.
+Des grandes variations avaient étés observée à cause des vibrations sur la table. Celles-ci jouaient probablement sur les contacts des connections, augmentant ainsi la résistance du circuit. Cela a essayé d'être minimisé. Les mesures ont été refaites avec une attention particulière pour les vibrations.
 
 Puissance dissipé pour le capteur à effet hall:
 
-Alimentation de l'ampliOP 15V*0.01A + Alimentation du capteur 6.00V*0.03A
+Alimentation de l'opamp 15V*0.01A + Alimentation du capteur 6.00V*0.03A
 
 =0.3 W constant sur toute la plage
-
-
-
-##### Graphique de la courbe d'étalonnage 
-
-
 
 
 
@@ -286,6 +291,8 @@ Le courant du circuit a été setté à 1A constant (2.86V) au borne du circuit.
 
 Ça diminue pcq la projection perpendiculaire est plus petite que quand il est à 90, soit totalement perpendiculaire
 
+
+
 ##### Le courant d'alimentation du capteur influence-t-il les mesure?
 
 Oui, le courant étant augmenté, le champ magnétique est plus intense. Un champ magnétique plus grand traversant un courant similaire engendrera un un déplacement des électrons plus grand à cause de la force de Lorentz plus élevée et donc une tension plus grande.
@@ -294,30 +301,17 @@ Une augmentation de 0.2V génère environ la même variation de tension aux born
 
 
 
-Mesure de la variation en fréquence
-Capteur HALL
+**Mesure de la variation en fréquence**
+
+***Capteur HALL***
 
 un générateur de fréquence a été envoyé dans le fil parcourant le capteur a effet Hall. Cette fréquence a été augmentée jusqu'à ce que le signal du capteur commence à varier étrangement.
 
 Fréquence de coupure = 12kHz
 
-Capteur SHUNT
+***Capteur SHUNT***
 
 même chose fréquence de coupure =30kHz
-
-
-
-#### Comparaison des caractéristiques des capteurs
-
-| Caractéristique   | Capteur Shunt | Capteur Hall |
-| ----------------- | ------------- | ------------ |
-| Plage             | [0-1]         | [0-1]        |
-| Sensibilité[mV/A] | -             | +            |
-| Linéarité         |               |              |
-| Résolution        |               |              |
-| Comsommation      |               | 0.3W         |
-| Bande passante    |               |              |
-| Synthèse          |               |              |
 
 
 
@@ -361,7 +355,7 @@ Tension résiduelle peut être traitée à l'aide d'un détecteur synchrone.
 
 Une tension alternative sera appliquée. la fréquence de la source sera appliquée afin de minimiser la tension résiduelle au zéro (origine) où V3-V2=0. Ainsi on trouve la position ou le V3-V2 est un minimale, puis on joue sur la fréquence. des bons de 5mm en position seront effectués, suivi d'une mesure de V3-V2.
 
-Tension utilisée: 2Vpp = 1.41VRMS sinusoide. (2.05V$\pm​$0.05)
+Tension utilisée: 2Vpp = 1.41VRMS sinusoide. (2.05V$\pm$0.05)
 
 Fréquence utilisée: Par tâtonnements, une fréquence optimale de 3,016kHz afin de minimiser le déphase, minimiser le zéro résiduel (16mV C-C // 0mV moyenne)
 
@@ -423,7 +417,7 @@ Fréquence utilisée = 32.18kHz (minimiser la tension résiduelle et tout)
 
 tension Vpp = 2.77V
 
-longueur de la plaque horizontale 46.5 $\pm​$ 0.5 cm
+longueur de la plaque horizontale 46.5 $\pm$ 0.5 cm
 
 longueur de la tige verticale: 45 $\pm$ 0.5 cm
 
@@ -489,7 +483,7 @@ Vérifier la variation de courant en fonction de la tension (15 valeurs) et mont
 
 *Tension source signal: 0-5V*
 
-*Tension alimentation: 25$\pm​$*
+*Tension alimentation: 25$\pm$*
 
 | Tension signal [V $\pm$ 0.05] | Courant [mA $\pm$ 0.05] |
 | ----------------------------- | ----------------------- |
@@ -563,7 +557,7 @@ On devrait s'attendre à une transmission constante peu importe la résistance d
 
 - La mesure que vous venez de faire conﬁrme-t-elle celle que vous avez faite dans la deuxième partie?	
 
-  > Avec les mesures de la deuxieme partie, on remarque que le point d'opération est d'environ 8V. Ayant mise la source à 25V, on devrait pouvoir se permettre un $\Delta V$ d'environ 17V avant d'atteindre ce point d'opération. Si on calcule cela, disons que l'opération normale est à 13mA, une chute de 17 correspondrait à  $\frac{17}{0.013}=1307\Omega​$.Comme observé, la résistance de coupure se trouve dans les environs de la résistance calculée.
+  > Avec les mesures de la deuxieme partie, on remarque que le point d'opération est d'environ 8V. Ayant mise la source à 25V, on devrait pouvoir se permettre un $\Delta V$ d'environ 17V avant d'atteindre ce point d'opération. Si on calcule cela, disons que l'opération normale est à 13mA, une chute de 17 correspondrait à  $\frac{17}{0.013}=1307\Omega$.Comme observé, la résistance de coupure se trouve dans les environs de la résistance calculée.
 
 - Si vous aviez à installer une boucle de courant pour la plage normale de 4 mA à 20 mA, quelle serait la résistance maximale utilisable avec une source d’alimentation de 30 V?
 
@@ -692,7 +686,7 @@ La linéarité a été observée pour tous les appareils. Le convertisseur de te
 ##### *5. Amplificateur d'instrumentation*
 
 - Circuit différentiel qui diminue les imperfections
-- Équation du gain: $G_D = \left( 1 + \frac{2R_1}{R_4}\right) \frac{R_3}{R_2} ​$, dans un monde idéal G_mc = 0 mais jamais le cas
+- Équation du gain: $G_D = \left( 1 + \frac{2R_1}{R_4}\right) \frac{R_3}{R_2} $, dans un monde idéal G_mc = 0 mais jamais le cas
 - Pour aider aux manipulations, on ajuste généralement uniquement R4 (avec résistance variable). 
 
 L'ampli utilisé est le UA741. Le PINOUT est illustré ci-contre:
@@ -901,7 +895,7 @@ Types de capteurs étudiés
   - Les températures facilement reproductibles en laboratoire pour l'étallonnage des capteurs sont les suivantes:![1551385842613](assets/1551385842613.png)
 
 - Thermomètre à radiation
-  - $$P=\epsilon \sigma T^4​$$
+  - $$P=\epsilon \sigma T^4$$
   - On doit utiliser un système  optique devant le capteur qui servira à concentrer la la radiation sur le capteur et à déterminer la région sur la laquelle la radiation est mesurée.
   - Pour le système optique, Énerige majoritairement dans l'infrarouge, mais les lentilles classique ne laissent pas passer infrarouge, on doit utiliser des lentille fancy exotiques ou des fentres, mais il y aura une réflection importante.
   - Le détecteur est soit quantique ou thermique .
@@ -966,7 +960,7 @@ L'étalonnage des 5 capteurs suivants sera fait simultanément dans un bassin de
 
 ​	
 
-La diode a été alimentée avec un courant de 1mA (0.9861mA $\pm​$ 0.001)
+La diode a été alimentée avec un courant de 1mA (0.9861mA $\pm$ 0.001)
 
 ​		**Tableau 3 : Mesure de la dérive de la tension de seuil de la diode suite à une variation de courant, lorsque qu'alimenté à courant constant de 1mA.**
 
@@ -1082,7 +1076,7 @@ Types de capteurs:
 
 À déterminé durant la période de labo
 
-Angle du capteur: 45$\pm​$5
+Angle du capteur: 45$\pm$5
 
 ****
 
@@ -1165,7 +1159,7 @@ P-P: 7.12
 | 64                 | 743.2               |
 |                    |                     |
 
-$$V=\sqrt{\frac{2(P_{tot}-P_{stat})}{\rho}}​$$
+$$V=\sqrt{\frac{2(P_{tot}-P_{stat})}{\rho}}$$
 
 | Vitesse de l'air [$m/s$] | Délais de propagation [$\mu s$ $\pm$ 0.1] |
 | ------------------------ | ----------------------------------------- |
@@ -1395,7 +1389,7 @@ Jauge à déformation
 | -------------------------------------------------- | ---------------------------------------- |
 | **Coéquipiers:** Anais parrot, Quantin perry-auger | **Date d'expérimentation: 5 Avril 2019** |
 
-[1] Protocole de laboratoire [disponible ici](https://sitescours.monportail.ulaval.ca/contenu/sitescours/036/03613/201901/site103274/accueil/bloctexte545794/ressourcestexte/NotesDeCours%20GPH-2003.pdf?identifiant=1d53dc8887cf78038c83287e866aaea46c688607) [p.51].
+[1] [Protocole de laboratoire](https://sitescours.monportail.ulaval.ca/contenu/sitescours/036/03613/201901/site103274/accueil/bloctexte545794/ressourcestexte/NotesDeCours%20GPH-2003.pdf?identifiant=1d53dc8887cf78038c83287e866aaea46c688607) [p.51].
 
 ### But
 
@@ -1471,9 +1465,7 @@ La jauge à déformation fonctionne par l'intermédiaire d'un matériau conducti
 
 ##### Consigne importante
 
-*Afin de ne pas endommager le montage (ni faire fondre la colle qui maintient les jauges), ne dépassez pas une température de 80 ◦C avec les souffleries*. [1]
-
-
+*Afin de ne pas endommager le montage, ne dépassez pas une température de 80 ◦C avec les souffleries*. [1]
 
 ##### Cylindre pressurisé
 
@@ -1514,11 +1506,11 @@ Mesure de la déformation linéaire pour un barre en tension
 
 - Longueur totale L = 24.8 $\pm$ 0.3
 
-- Distance $l$ = 12.6 $\pm​$ 0.5
+- Distance $l$ = 12.6 $\pm$ 0.5
 
 - Épaisseur = 4.26 $\pm$ 0.05
 
-- Ajuster le pont de Wheatstone afin d'avoir une sortie de 0V $\pm​$ 0.00002V
+- Ajuster le pont de Wheatstone afin d'avoir une sortie de 0V $\pm$ 0.00002V
 
 - **Premier test avec la jauge du haut seulement**. Mesure de tension de sortie du pont en fonction de la hauteur au support.
 
