@@ -1105,9 +1105,12 @@ DImètre du tube: 8.0cm
 
 Longeur du tube pour capteur: 26.0cm
 
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
 | $\Delta P$$\pm$ 4 | $\Delta \phi$ $\pm$ 5                         |
 =======
+=======
+>>>>>>> master
 longeur du pulse envoyé: 180ns
 
 | $\Delta P$$\pm​$ 4 | $\Delta \phi$ $\pm​$ 5                         |
@@ -1163,6 +1166,7 @@ P-P:308mV
 
 P-P: 7.12
 
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
 | $\Delta P$ $\pm $1 | $\Delta t$$\pm $0.1 |
 | ------------------ | ------------------- |
@@ -1179,6 +1183,8 @@ P-P: 7.12
 | 64                 | 743.2               |
 |                    |                     |
 =======
+=======
+>>>>>>> master
 | Temps de propagation [$\mu s$$\pm $0.1] | $V_{fluide}$[$m/s$] | $\Delta P$[Pascals$\pm $1] |
 | --------------------------------------- | ------------------- | -------------------------- |
 | 750.8                                   | 0 $\pm$ 2           | 0                          |
@@ -1193,7 +1199,10 @@ P-P: 7.12
 | 743.2                                   | 10.2$\pm$0.6        | 62                         |
 | 743.2                                   | 10.4$\pm$0.6        | 64                         |
 |                                         |                     |                            |
+<<<<<<< HEAD
 >>>>>>> add lab 4
+=======
+>>>>>>> master
 
 $$V=\sqrt{\frac{2(P_{tot}-P_{stat})}{\rho}}$$
 

@@ -3,17 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="2d590210-da52-48ec-8d1b-16b73a422dd1" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/temps.txt" afterDir="false" />
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mdTableGrapher.py" beforeDir="false" afterPath="$PROJECT_DIR$/mdTableGrapher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/md_mux.png" beforeDir="false" afterPath="$PROJECT_DIR$/md_mux.png" afterDir="false" />
 =======
+=======
+>>>>>>> master
       <change beforePath="$PROJECT_DIR$/../Cahier de laboratoire - GPH2003 - H19.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Cahier de laboratoire - GPH2003 - H19.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dephasage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dephasage.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mdTableGrapher.py" beforeDir="false" afterPath="$PROJECT_DIR$/mdTableGrapher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/md_mux.txt" beforeDir="false" afterPath="$PROJECT_DIR$/md_mux.txt" afterDir="false" />
+<<<<<<< HEAD
 >>>>>>> add lab 4
+=======
+>>>>>>> master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +28,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
     <SUITE FILE_PATH="coverage/LAB5___Débitmètre$mdTableGrapher.coverage" NAME="mdTableGrapher Coverage Results" MODIFIED="1553784973030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -60,6 +67,11 @@
     <SUITE FILE_PATH="coverage/LAB5___Débitmètre$mdTableGrapher.coverage" NAME="mdTableGrapher Coverage Results" MODIFIED="1553866439085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
+=======
+    <SUITE FILE_PATH="coverage/LAB5___Débitmètre$mdTableGrapher.coverage" NAME="mdTableGrapher Coverage Results" MODIFIED="1553866439085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FileEditorManager">
+>>>>>>> master
     <splitter split-orientation="horizontal" split-proportion="0.6587112">
       <split-first>
         <leaf>
@@ -112,15 +124,20 @@
       <list>
         <option value="$PROJECT_DIR$/tablePosition.txt" />
         <option value="$PROJECT_DIR$/dephasage.txt" />
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
 =======
         <option value="$PROJECT_DIR$/md_mux.txt" />
 >>>>>>> add lab 4
+=======
+        <option value="$PROJECT_DIR$/md_mux.txt" />
+>>>>>>> master
         <option value="$PROJECT_DIR$/temps.txt" />
         <option value="$PROJECT_DIR$/mdTableGrapher.py" />
       </list>
     </option>
   </component>
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="387" />
@@ -128,6 +145,8 @@
     <option name="width" value="838" />
     <option name="height" value="1039" />
 =======
+=======
+>>>>>>> master
   <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="12" />
     <option name="y" value="217" />
@@ -213,16 +232,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553709016340</updated>
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
       <workItem from="1553709017672" duration="1786000" />
       <workItem from="1553733070528" duration="7929000" />
 =======
       <workItem from="1553709017672" duration="4834000" />
 >>>>>>> add lab 4
+=======
+      <workItem from="1553709017672" duration="4834000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
     <option name="totallyTimeSpent" value="9715000" />
   </component>
@@ -231,6 +255,8 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.26907074" />
 =======
+=======
+>>>>>>> master
     <option name="totallyTimeSpent" value="4834000" />
   </component>
   <component name="ToolWindowManager">
@@ -239,20 +265,28 @@
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+<<<<<<< HEAD
 >>>>>>> add lab 4
+=======
+>>>>>>> master
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
       <window_info anchor="bottom" id="Run" order="2" weight="0.3243626" />
 =======
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4409534" />
 >>>>>>> add lab 4
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4409534" />
+>>>>>>> master
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
@@ -261,6 +295,8 @@
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32936078" />
 =======
+=======
+>>>>>>> master
       <window_info anchor="right" auto_hide="true" id="SciView" show_stripe_button="false" type="FLOATING" weight="0.32995737" />
       <window_info anchor="right" id="Database" />
 >>>>>>> add lab 4
@@ -307,22 +343,30 @@
     <entry file="file://$PROJECT_DIR$/temps.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
           <caret column="69" selection-start-column="69" selection-end-column="69" />
 =======
           <caret column="54" selection-start-column="54" selection-end-column="54" />
 >>>>>>> add lab 4
+=======
+          <caret column="54" selection-start-column="54" selection-end-column="54" />
+>>>>>>> master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mdTableGrapher.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
           <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
 =======
           <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
 >>>>>>> add lab 4
+=======
+          <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+>>>>>>> master
         </state>
       </provider>
     </entry>

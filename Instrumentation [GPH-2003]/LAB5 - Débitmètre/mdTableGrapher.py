@@ -51,11 +51,15 @@ ax = fig.add_subplot(111)
 # ========= TICKS SETTINGS ===========
 majorLocator = MultipleLocator(2)
 majorFormatter = FormatStrFormatter('%d')
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
 xminorLocator = MultipleLocator(0.25)
 =======
 xminorLocator = MultipleLocator(2)
 >>>>>>> add lab 4
+=======
+xminorLocator = MultipleLocator(2)
+>>>>>>> master
 yminorLocator = MultipleLocator(0.25)
 
 #ax.xaxis.set_major_locator(majorLocator)
@@ -67,6 +71,7 @@ ax.tick_params()
 
 for i, ylabel in enumerate(labels[1:]):
     slope, intercept, r_value, p_value, std_err = linregress(data[0], data[1+i])
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
     ylabel = "Fréquence de la sortie"
     ax.errorbar(data[0], data[1+i], xerr=errors[0], yerr=errors[1+i], marker=".", linestyle="", markersize=8, label="%s ($R^2=%.5f$)" % (ylabel, -1*round(r_value, 5)))
@@ -78,11 +83,18 @@ for i, ylabel in enumerate(labels[1:]):
     #Linear regression
     ax.plot(data[0], np.multiply(slope, data[0])+intercept, label=("(%.1f $\pm$ %.1f)$\cdot$ $V_s$ + (%d $\pm$ %d)" % (slope, 0.3, intercept, 300)))
 >>>>>>> add lab 4
+=======
+    ylabel = "Vitesse de l'air"
+    ax.errorbar(data[0], data[1+i], xerr=errors[0], yerr=errors[1+i], marker=".", linestyle="", markersize=8, label="%s ($R^2=%.5f$)" % (ylabel, -1*round(r_value, 5)))
+    #Linear regression
+    ax.plot(data[0], np.multiply(slope, data[0])+intercept, label=("(%.1f $\pm$ %.1f)$\cdot$ $V_s$ + (%d $\pm$ %d)" % (slope, 0.3, intercept, 300)))
+>>>>>>> master
 
 ax.set_xlabel("{} [{}]".format(labels[0], units[0]), fontsize=12)
 ax.set_ylabel("{} [{}]".format(labels[1], units[1]), fontsize=12)
 
 # ===== MANUAL SETTINGS =========
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/hello
 ax.set_ylabel("Temps de propagation [$\mu s$]")
 ax.set_xlabel("Vitesse de l'air [$m/s$]")
@@ -97,11 +109,20 @@ ax.set_xlabel("Temps de propagation [$\mu s$]")
 ax.set_ylabel("Vitesse de l'air [$m/s$]")
 
 ax.legend(loc='best', fontsize=11)
+=======
+ax.set_xlabel("Temps de propagation [$\mu s$]")
+ax.set_ylabel("Vitesse de l'air [$m/s$]")
+
+ax.legend(loc='best', fontsize=11)
+>>>>>>> master
 ax.grid(alpha=0.5, linestyle='--')
 
 
 fig.set_size_inches(6,6)
 plt.show()
 fig.savefig('dephasage2.png', dpi=600)
+<<<<<<< HEAD
 >>>>>>> add lab 4
+=======
+>>>>>>> master
 
